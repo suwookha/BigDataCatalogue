@@ -1,0 +1,266 @@
+# baseURI: http://etri.re.kr/bdc
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://purl.org/dc/terms/
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/dcat#
+# imports: https://www.w3.org/2002/07/owl#
+# prefix: bdc
+
+@prefix bdc: <http://etri.re.kr/bdc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://etri.re.kr/bdc>
+  rdf:type owl:Ontology ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/dcat#> ;
+  owl:imports <https://www.w3.org/2002/07/owl#> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+bdc:Catalogue
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:ContactType
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:DataQuality
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:DataRight
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:DataTypeCode
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Dataset
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Distribution
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Domain
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Record
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:ResponsibleParty
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:SemiStructured
+  rdf:type bdc:DataTypeCode ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Structured
+  rdf:type bdc:DataTypeCode ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Unstructured
+  rdf:type bdc:DataTypeCode ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:accessInformation
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:string ;
+.
+bdc:address
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:contact
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range bdc:ContactType ;
+.
+bdc:contactPoint
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range bdc:ResponsibleParty ;
+.
+bdc:dataQuality
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:DataQuality ;
+.
+bdc:dataRight
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range bdc:DataRight ;
+.
+bdc:dataType
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range bdc:DataTypeCode ;
+.
+bdc:dataset
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Dataset ;
+.
+bdc:distribution
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range bdc:Distribution ;
+.
+bdc:hoursOfServices
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:individualName
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:issuedDate
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Record ;
+  rdfs:range <http://purl.org/dc/terms/RFC5646> ;
+.
+bdc:license
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:DataRight ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:modifiedDate
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Record ;
+  rdfs:range <http://purl.org/dc/terms/RFC5646> ;
+.
+bdc:onlineResource
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:organizationName
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:phoneNumber
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:positionName
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:qualityRequirements
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:DataQuality ;
+  rdfs:range xsd:string ;
+.
+bdc:qualityResult
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:DataQuality ;
+  rdfs:range xsd:string ;
+.
+bdc:record
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Record ;
+.
+bdc:responsibleParty
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:ResponsibleParty ;
+.
+bdc:rightsStatement
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:DataRight ;
+  rdfs:range xsd:string ;
+.
+bdc:roleOrFunction
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:sampleData
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:sourceDomain
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Domain ;
+.
+bdc:taxonomy
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Domain ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:unitOfMeasure
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:DataQuality ;
+  rdfs:range xsd:string ;
+.
+bdc:usageDomain
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Domain ;
+.
+<http://purl.org/dc/elements/1.1/description>
+  rdfs:domain bdc:Catalogue ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/elements/1.1/format>
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/elements/1.1/hasRelation>
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range bdc:Dataset ;
+.
+<http://purl.org/dc/elements/1.1/keyword>
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/elements/1.1/language>
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range <http://purl.org/dc/terms/RFC5646> ;
+.
+<http://purl.org/dc/elements/1.1/temporalCoverage>
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/elements/1.1/title>
+  rdfs:domain bdc:Catalogue ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:domain bdc:Domain ;
+  rdfs:range xsd:string ;
+.
+<http://purl.org/dc/elements/1.1/updateFrequency>
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+owl:versionInfo
+  rdfs:domain bdc:Catalogue ;
+.
+<http://www.w3.org/ns/dcat#byteSize>
+  rdfs:domain bdc:Distribution ;
+.
