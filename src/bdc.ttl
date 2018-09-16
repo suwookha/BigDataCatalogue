@@ -153,6 +153,7 @@ bdc:contactPoint
 .
 bdc:dataQuality
   rdf:type rdf:Property ;
+  rdfs:comment "data quality information for the data catalogue" ;
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:DataQuality ;
 .
@@ -164,11 +165,13 @@ bdc:dataRight
 .
 bdc:dataType
   rdf:type rdf:Property ;
+  rdfs:comment "the type information of the dataset" ;
   rdfs:domain bdc:Distribution ;
   rdfs:range bdc:DataTypeCode ;
 .
 bdc:dataset
   rdf:type rdf:Property ;
+  rdfs:comment "dataset information for the data catalogue" ;
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:Dataset ;
 .
@@ -246,15 +249,17 @@ bdc:qualityResult
 .
 bdc:record
   rdf:type rdf:Property ;
+  rdfs:comment "record information for the data catalogue" ;
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:Record ;
 .
 bdc:responsibleParty
   rdf:type rdf:Property ;
+  rdfs:comment "responsible party information for the data catalogue" ;
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:ResponsibleParty ;
 .
-bdc:rightsStatement
+bdc:rightStatement
   rdf:type rdf:Property ;
   rdfs:comment "information to the usage permissions being agreed to" ;
   rdfs:domain bdc:DataRight ;
