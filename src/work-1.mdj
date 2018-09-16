@@ -2575,7 +2575,7 @@
 											"top": 886,
 											"width": 222.19970703125,
 											"height": 13,
-											"text": "+rightsStatement[0..1]",
+											"text": "+rightStatement[0..1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5864,9 +5864,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFkWvnX2mO3e/0="
 							},
-							"name": "rightsStatement",
-							"type": "",
-							"multiplicity": "0..1"
+							"name": "rightStatement[0..1]"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5894,7 +5892,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "ObjectDiagram1",
+					"name": "HealthObjectDiagram",
 					"ownedViews": [
 						{
 							"_type": "UMLObjectView",
@@ -6423,9 +6421,9 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 637,
+									"left": 636,
 									"top": 476,
-									"width": 19.5126953125,
+									"width": 20,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -6486,9 +6484,9 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 728,
+									"left": 727,
 									"top": 475,
-									"width": 19.5126953125,
+									"width": 20,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7765,9 +7763,9 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 734,
+									"left": 733,
 									"top": 586,
-									"width": 19.5126953125,
+									"width": 20,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -9291,7 +9289,7 @@
 									"font": "Arial;13;0",
 									"left": 593,
 									"top": 773,
-									"width": 70.458984375,
+									"width": 71,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -9401,7 +9399,7 @@
 									"font": "Arial;13;0",
 									"left": 906,
 									"top": 848,
-									"width": 70.458984375,
+									"width": 71,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
