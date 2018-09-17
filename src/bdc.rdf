@@ -1262,7 +1262,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#issuedDate">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#Record"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/RFC5646"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment>the issued date of listing the dataset in the catalogue</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1282,7 +1282,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#modifiedDate">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#Record"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/RFC5646"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment>the most resent modified date of data catalogue</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1348,9 +1348,9 @@
     
 
 
-    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#rightStatement -->
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#rightsStatement -->
 
-    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#rightStatement">
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#rightsStatement">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#DataRight"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>information to the usage permissions being agreed to</rdfs:comment>

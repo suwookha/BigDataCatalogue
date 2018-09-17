@@ -197,7 +197,7 @@ bdc:issuedDate
   rdf:type rdf:Property ;
   rdfs:comment "the issued date of listing the dataset in the catalogue" ;
   rdfs:domain bdc:Record ;
-  rdfs:range <http://purl.org/dc/terms/RFC5646> ;
+  rdfs:range xsd:date ;
 .
 bdc:license
   rdf:type rdf:Property ;
@@ -209,7 +209,7 @@ bdc:modifiedDate
   rdf:type rdf:Property ;
   rdfs:comment "the most resent modified date of data catalogue" ;
   rdfs:domain bdc:Record ;
-  rdfs:range <http://purl.org/dc/terms/RFC5646> ;
+  rdfs:range xsd:date ;
 .
 bdc:onlineResource
   rdf:type rdf:Property ;
@@ -259,7 +259,7 @@ bdc:responsibleParty
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:ResponsibleParty ;
 .
-bdc:rightStatement
+bdc:rightsStatement
   rdf:type rdf:Property ;
   rdfs:comment "information to the usage permissions being agreed to" ;
   rdfs:domain bdc:DataRight ;

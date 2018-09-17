@@ -245,9 +245,6 @@
         <NamedIndividual IRI="http://purl.org/dc/terms/MethodOfInstruction"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#rightStatement"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#roleOrFunction"/>
     </Declaration>
     <Declaration>
@@ -441,6 +438,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/replaces"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#rightsStatement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/educationLevel"/>
@@ -1991,7 +1991,7 @@
         <Class IRI="#DataQuality"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#rightStatement"/>
+        <DataProperty IRI="#rightsStatement"/>
         <Class IRI="#DataRight"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -2108,7 +2108,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#issuedDate"/>
-        <Datatype IRI="http://purl.org/dc/terms/RFC5646"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#license"/>
@@ -2116,7 +2116,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#modifiedDate"/>
-        <Datatype IRI="http://purl.org/dc/terms/RFC5646"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#onlineResource"/>
@@ -2143,7 +2143,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#rightStatement"/>
+        <DataProperty IRI="#rightsStatement"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -5259,7 +5259,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#rightStatement</IRI>
+        <IRI>#rightsStatement</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">information to the usage permissions being agreed to</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>

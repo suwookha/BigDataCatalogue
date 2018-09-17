@@ -2575,7 +2575,7 @@
 											"top": 886,
 											"width": 222.19970703125,
 											"height": 13,
-											"text": "+rightStatement[0..1]",
+											"text": "+rightsStatement[0..1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5864,7 +5864,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFkWvnX2mO3e/0="
 							},
-							"name": "rightStatement[0..1]"
+							"name": "rightsStatement[0..1]"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7534,7 +7534,7 @@
 											"top": 838,
 											"width": 268.80419921875,
 											"height": 13,
-											"text": "+rightStatement = Public access",
+											"text": "+rightsStatement = Public access",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11505,6 +11505,7 @@
 								"$ref": "AAAAAAFlVw77tE+iFy8="
 							},
 							"name": "individualName",
+							"type": "",
 							"value": "John"
 						},
 						{
@@ -11979,8 +11980,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFlVxlLt1arPSs="
 							},
-							"name": "rightStatement",
-							"type": "",
+							"name": "rightsStatement",
 							"value": "Public access"
 						},
 						{
