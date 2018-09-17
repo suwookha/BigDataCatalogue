@@ -265,7 +265,7 @@ bdc:rightStatement
   rdfs:domain bdc:DataRight ;
   rdfs:range xsd:string ;
 .
-bdc:roleOrFunction
+bdc:function
   rdf:type rdf:Property ;
   rdfs:comment "function performed by the responsible party" ;
   rdfs:domain bdc:ResponsibleParty ;
