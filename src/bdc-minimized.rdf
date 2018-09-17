@@ -391,9 +391,9 @@
     
 
 
-    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#roleOrFunction -->
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#function -->
 
-    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#roleOrFunction">
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#function">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#ResponsibleParty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>function performed by the responsible party</rdfs:comment>
