@@ -1837,7 +1837,7 @@
 											"top": 499,
 											"width": 199,
 											"height": 13,
-											"text": "+roleOrFunction",
+											"text": "+function",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5563,7 +5563,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFkWvj/72LoMM8="
 							},
-							"name": "roleOrFunction",
+							"name": "function",
 							"type": ""
 						},
 						{
@@ -5864,7 +5864,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFkWvnX2mO3e/0="
 							},
-							"name": "rightsStatement[0..1]"
+							"name": "rightsStatement[0..1]",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6253,7 +6254,7 @@
 											"top": 491,
 											"width": 324.46044921875,
 											"height": 13,
-											"text": "+roleOrFunction = Manager",
+											"text": "+function = Manager",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11534,7 +11535,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFlVw77tE+iFy8="
 							},
-							"name": "roleOrFunction",
+							"name": "function",
 							"type": "",
 							"value": "Manager"
 						},
@@ -11981,6 +11982,7 @@
 								"$ref": "AAAAAAFlVxlLt1arPSs="
 							},
 							"name": "rightsStatement",
+							"type": "",
 							"value": "Public access"
 						},
 						{
