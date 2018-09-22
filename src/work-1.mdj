@@ -169,7 +169,7 @@
 											"top": 484,
 											"width": 159.326171875,
 											"height": 13,
-											"text": "+language: RFC5646[0..1]",
+											"text": "+language: RFC 5646[0..1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1040,7 +1040,7 @@
 											"font": "Arial;13;1",
 											"left": 101,
 											"top": 447,
-											"width": 160.0751953125,
+											"width": 163.68701171875,
 											"height": 13,
 											"text": "BDC_Record"
 										},
@@ -1075,7 +1075,7 @@
 									"font": "Arial;13;0",
 									"left": 96,
 									"top": 440,
-									"width": 170.0751953125,
+									"width": 173.68701171875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFkWvghLWIUuWY="
@@ -1112,9 +1112,9 @@
 											"font": "Arial;13;0",
 											"left": 101,
 											"top": 470,
-											"width": 160.0751953125,
+											"width": 163.68701171875,
 											"height": 13,
-											"text": "+modifiedDate: ISO8601[1]",
+											"text": "+modifiedDate: ISO 8601[1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1129,16 +1129,16 @@
 											"font": "Arial;13;0",
 											"left": 101,
 											"top": 485,
-											"width": 160.0751953125,
+											"width": 163.68701171875,
 											"height": 13,
-											"text": "+issuedDate: ISO8601[0..1]",
+											"text": "+issuedDate: ISO 8601[0..1]",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 96,
 									"top": 465,
-									"width": 170.0751953125,
+									"width": 173.68701171875,
 									"height": 38
 								},
 								{
@@ -1153,7 +1153,7 @@
 									"font": "Arial;13;0",
 									"left": 96,
 									"top": 503,
-									"width": 170.0751953125,
+									"width": 173.68701171875,
 									"height": 10
 								},
 								{
@@ -1193,7 +1193,7 @@
 							"containerChangeable": true,
 							"left": 96,
 							"top": 440,
-							"width": 170.0751953125,
+							"width": 173.68701171875,
 							"height": 73,
 							"nameCompartment": {
 								"$ref": "AAAAAAFkWvghLWITAGg="
@@ -3252,7 +3252,7 @@
 										"$ref": "AAAAAAFkW0W4a3YLKl4="
 									},
 									"font": "Arial;13;0",
-									"left": 274,
+									"left": 276,
 									"top": 454,
 									"width": 44.43994140625,
 									"height": 13,
@@ -3275,7 +3275,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 296,
+									"left": 298,
 									"top": 439,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -3296,7 +3296,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 296,
+									"left": 298,
 									"top": 484,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -3317,7 +3317,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 291,
+									"left": 295,
 									"top": 454,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -3338,7 +3338,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 293,
+									"left": 297,
 									"top": 441,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -3358,7 +3358,7 @@
 										"$ref": "AAAAAAFkW0W4a3YM0ps="
 									},
 									"font": "Arial;13;0",
-									"left": 277,
+									"left": 281,
 									"top": 482,
 									"width": 20,
 									"height": 13,
@@ -3469,7 +3469,7 @@
 								"$ref": "AAAAAAFkWvghLWIS9vA="
 							},
 							"lineStyle": 1,
-							"points": "266:476;327:475",
+							"points": "270:476;327:475",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFkW0W4a3YQ+Pc="
@@ -5224,7 +5224,7 @@
 								"$ref": "AAAAAAFkWrd5gM1TQME="
 							},
 							"name": "language",
-							"type": "RFC5646",
+							"type": "RFC 5646",
 							"multiplicity": "0..1"
 						},
 						{
@@ -5464,7 +5464,7 @@
 								"$ref": "AAAAAAFkWvghLWIQXw8="
 							},
 							"name": "modifiedDate",
-							"type": "ISO8601",
+							"type": "ISO 8601",
 							"multiplicity": "1"
 						},
 						{
@@ -5474,7 +5474,7 @@
 								"$ref": "AAAAAAFkWvghLWIQXw8="
 							},
 							"name": "issuedDate",
-							"type": "ISO8601",
+							"type": "ISO 8601",
 							"multiplicity": "0..1"
 						}
 					]
