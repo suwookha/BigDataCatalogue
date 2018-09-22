@@ -7097,7 +7097,7 @@
 											"top": 326,
 											"width": 289.04052734375,
 											"height": 13,
-											"text": "+qualityRequirements = under 0.1% missing fields",
+											"text": "+qualityRequirements = under 1% missing fields",
 											"horizontalAlignment": 0
 										},
 										{
@@ -7131,7 +7131,7 @@
 											"top": 356,
 											"width": 289.04052734375,
 											"height": 13,
-											"text": "+qualityResult = passed",
+											"text": "+qualityResult = passed (99.3%)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -11788,7 +11788,7 @@
 							},
 							"name": "qualityRequirements",
 							"type": "",
-							"value": "under 0.1% missing fields"
+							"value": "under 1% missing fields"
 						},
 						{
 							"_type": "UMLSlot",
@@ -11808,7 +11808,7 @@
 							},
 							"name": "qualityResult",
 							"type": "",
-							"value": "passed"
+							"value": "passed (99.3%)"
 						}
 					]
 				},
