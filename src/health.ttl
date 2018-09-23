@@ -1,0 +1,417 @@
+# baseURI: http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://purl.org/dc/terms/
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/dcat#
+# imports: https://www.w3.org/2002/07/owl#
+# prefix: bdc
+
+@prefix bdc: <http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:description
+  rdfs:domain bdc:Catalogue ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+dc:format
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:string ;
+.
+dc:hasRelation
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range bdc:Dataset ;
+.
+dc:keyword
+  rdf:type rdf:Property ;
+  rdfs:comment "commonly used word(s) used to describe the dataset" ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+dc:language
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range dct:RFC5646 ;
+.
+dc:temporalCoverage
+  rdf:type rdf:Property ;
+  rdfs:comment "time period (including time zone) when the dataset was captured" ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+dc:title
+  rdfs:domain bdc:Catalogue ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:domain bdc:Domain ;
+  rdfs:range xsd:string ;
+.
+dc:updateFrequency
+  rdf:type rdf:Property ;
+  rdfs:comment "rate of occurrence of dataset update" ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range xsd:string ;
+.
+<http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge>
+  rdf:type owl:Ontology ;
+  owl:imports dc: ;
+  owl:imports dct: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports dcat: ;
+  owl:imports <https://www.w3.org/2002/07/owl#> ;
+.
+bdc:Catalogue
+  rdf:type rdfs:Class ;
+  rdfs:comment "Root entity which defines metadata about dataset resource" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:ContactType
+  rdf:type rdfs:Class ;
+  rdfs:comment "information required to enable contact with the responsible person and/or organization" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:DataQuality
+  rdf:type rdfs:Class ;
+  rdfs:comment "data quality information for the data catalogue" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:DataRight
+  rdf:type rdfs:Class ;
+  rdfs:comment "information about limitation placed upon the use of the dataset" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:DataTypeCode
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Dataset
+  rdf:type rdfs:Class ;
+  rdfs:comment "dataset information for the data catalogue" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Distribution
+  rdf:type rdfs:Class ;
+  rdfs:comment "information about the distributor of and options for obtaining the dataset" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Domain
+  rdf:type rdfs:Class ;
+  rdfs:comment "source and/ or usage information for data catalogue" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Record
+  rdf:type rdfs:Class ;
+  rdfs:comment "record information for the data catalogue" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:ResponsibleParty
+  rdf:type rdfs:Class ;
+  rdfs:comment "responsible party information for the data catalogue" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:SemiStructured
+  rdf:type bdc:DataTypeCode ;
+  rdfs:comment "data that is neither raw data, nor typed data in a conventional database system (e.g. XML, JSON)" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Structured
+  rdf:type bdc:DataTypeCode ;
+  rdfs:comment "data that is organized in a format easily used by formatted repository" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:Unstructured
+  rdf:type bdc:DataTypeCode ;
+  rdfs:comment "data that either does not have a pre-defined data model or is not organized in a pre-defined manner" ;
+  rdfs:subClassOf owl:Thing ;
+.
+bdc:accessInformation
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "access information to dataset" ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:address
+  rdf:type rdf:Property ;
+  rdfs:comment "physical and email address at which the organization or individual may be contacted" ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:comment
+  rdf:type rdf:Property ;
+  rdfs:comment "an additional information for domain" ;
+  rdfs:domain bdc:Domain ;
+  rdfs:range xsd:string ;
+.
+bdc:contact
+  rdf:type rdf:Property ;
+  rdfs:comment "information required to enable contact with the responsible person and/or organization" ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range bdc:ContactType ;
+.
+bdc:contactPoint
+  rdf:type rdf:Property ;
+  rdfs:comment "contact point information for the dataset" ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range bdc:ResponsibleParty ;
+.
+bdc:dataQuality
+  rdf:type rdf:Property ;
+  rdfs:comment "data quality information for the data catalogue" ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:DataQuality ;
+.
+bdc:dataRight
+  rdf:type rdf:Property ;
+  rdfs:comment "Information about limitation placed upon the use of the dataset" ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range bdc:DataRight ;
+.
+bdc:dataType
+  rdf:type rdf:Property ;
+  rdfs:comment "the type information of the dataset" ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range bdc:DataTypeCode ;
+.
+bdc:dataset
+  rdf:type rdf:Property ;
+  rdfs:comment "dataset information for the data catalogue" ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Dataset ;
+.
+bdc:distribution
+  rdf:type rdf:Property ;
+  rdfs:comment "information about the distributor of and options for obtaining the dataset" ;
+  rdfs:domain bdc:Dataset ;
+  rdfs:range bdc:Distribution ;
+.
+bdc:function
+  rdf:type rdf:Property ;
+  rdfs:comment "function performed by the responsible party" ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:healthCatalogue
+  rdf:type bdc:Catalogue ;
+  dc:description "Health data of prescription & screening" ;
+  dc:language "ko_KR"^^dct:RFC5646 ;
+  dc:title "Health Data" ;
+  bdc:dataQuality bdc:quality ;
+  bdc:dataset bdc:prescriptionSet ;
+  bdc:dataset bdc:screenSet ;
+  bdc:record bdc:record1 ;
+  bdc:responsibleParty bdc:rParty ;
+  bdc:sourceDomain bdc:srcDomain ;
+  bdc:usageDomain bdc:useDomain ;
+  owl:versionInfo "1.0.0" ;
+.
+bdc:hoursOfServices
+  rdf:type rdf:Property ;
+  rdfs:comment "time period (including time zone) when individuals can contact the organization or individual" ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:individualName
+  rdf:type rdf:Property ;
+  rdfs:comment "name of the responsible person- surname, given name, title" ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:issuedDate
+  rdf:type rdf:Property ;
+  rdfs:comment "the issued date of listing the dataset in the catalogue" ;
+  rdfs:domain bdc:Record ;
+  rdfs:range xsd:date ;
+.
+bdc:ko_KR
+  rdf:type dct:LinguisticSystem ;
+.
+bdc:license
+  rdf:type rdf:Property ;
+  rdfs:comment "This links to the license document under which the catalog is made available and not the datasets" ;
+  rdfs:domain bdc:DataRight ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:modifiedDate
+  rdf:type rdf:Property ;
+  rdfs:comment "the most resent modified date of data catalogue" ;
+  rdfs:domain bdc:Record ;
+  rdfs:range xsd:date ;
+.
+bdc:myContact
+  rdf:type bdc:ContactType ;
+  bdc:address "Seoul Korea" ;
+  bdc:hoursOfServices "09:00~18:00" ;
+  bdc:onlineResource "https://www.nhis.or.kr"^^xsd:anyURI ;
+  bdc:phoneNumber "012-123-3456" ;
+.
+bdc:onlineResource
+  rdf:type rdf:Property ;
+  rdfs:comment "online information that can be used to contact the individual or organization" ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:organizationName
+  rdf:type rdf:Property ;
+  rdfs:comment "name of the responsible organization" ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:phoneNumber
+  rdf:type rdf:Property ;
+  rdfs:comment "telephone numbers at which the organization or individual may be contacted" ;
+  rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:positionName
+  rdf:type rdf:Property ;
+  rdfs:comment "role or position of the responsible person" ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
+.
+bdc:prescriptionDist
+  rdf:type bdc:Distribution ;
+  dc:format "csv" ;
+  bdc:accessInformation "http://www.nhis.or.kr/prescription.csv"^^xsd:anyURI ;
+  bdc:dataRight bdc:right ;
+  bdc:dataType bdc:Structured ;
+  bdc:sampleData "http://www.nhis.or.kr/prescription.sample.csv"^^xsd:anyURI ;
+  dcat:byteSize "3999200"^^xsd:unsignedLong ;
+.
+bdc:prescriptionSet
+  rdf:type bdc:Dataset ;
+  dc:description "Disease prescription data" ;
+  dc:keyword "prescription" ;
+  dc:temporalCoverage "2013.1.1 ~ 2017.12.31" ;
+  dc:title "Disease prescription" ;
+  dc:updateFrequency "weekly" ;
+  bdc:contactPoint bdc:rParty ;
+.
+bdc:quality
+  rdf:type bdc:DataQuality ;
+  bdc:qualityRequirements "under 1% missing fields" ;
+  bdc:qualityResult "passed (99.3%)" ;
+  bdc:unitOfMeasure "percent" ;
+.
+bdc:qualityRequirements
+  rdf:type rdf:Property ;
+  rdfs:comment "requirement statement for evaluating quality of dataset" ;
+  rdfs:domain bdc:DataQuality ;
+  rdfs:range xsd:string ;
+.
+bdc:qualityResult
+  rdf:type rdf:Property ;
+  rdfs:comment "the result of quality evaluation described by the unit of measure" ;
+  rdfs:domain bdc:DataQuality ;
+  rdfs:range xsd:string ;
+.
+bdc:rParty
+  rdf:type bdc:ResponsibleParty ;
+  bdc:contact bdc:myContact ;
+  bdc:function "Management" ;
+  bdc:individualName "John" ;
+  bdc:organizationName "National Health Insurance Service" ;
+  bdc:positionName "Manager" ;
+.
+bdc:record
+  rdf:type rdf:Property ;
+  rdfs:comment "record information for the data catalogue" ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Record ;
+.
+bdc:record1
+  rdf:type bdc:Record ;
+  bdc:issuedDate "2018-03-01"^^xsd:date ;
+  bdc:modifiedDate "2018-04-15"^^xsd:date ;
+.
+bdc:responsibleParty
+  rdf:type rdf:Property ;
+  rdfs:comment "responsible party information for the data catalogue" ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:ResponsibleParty ;
+.
+bdc:right
+  rdf:type bdc:DataRight ;
+  bdc:license "http://purl.obolibrary.org/obo/PDRO.owl"^^xsd:anyURI ;
+  bdc:rightsStatement "Public access" ;
+.
+bdc:rightsStatement
+  rdf:type rdf:Property ;
+  rdfs:comment "information to the usage permissions being agreed to" ;
+  rdfs:domain bdc:DataRight ;
+  rdfs:range xsd:string ;
+.
+bdc:sampleData
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "location information about a sample data including URL" ;
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:screenDist
+  rdf:type bdc:Distribution ;
+  dc:format "json" ;
+  bdc:accessInformation "http://www.nhis.or.kr/screen.csv"^^xsd:anyURI ;
+  bdc:dataRight bdc:right ;
+  bdc:dataType bdc:Structured ;
+  bdc:sampleData "http://www.nhis.or.kr/screen.sample.csv"^^xsd:anyURI ;
+  dcat:byteSize "12000000"^^xsd:unsignedLong ;
+.
+bdc:screenSet
+  rdf:type bdc:Dataset ;
+  dc:description "Health screening data" ;
+  dc:keyword "health" ;
+  dc:temporalCoverage "2010.1.1~2017.12.31" ;
+  dc:title "Health screening" ;
+  dc:updateFrequency "monthly" ;
+  bdc:contactPoint bdc:rParty ;
+  bdc:distribution bdc:screenDist ;
+.
+bdc:sourceDomain
+  rdf:type rdf:Property ;
+  rdfs:comment "source domain information for the data catalogue" ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Domain ;
+.
+bdc:srcDomain
+  rdf:type bdc:Domain ;
+  dc:title "Medical" ;
+  bdc:comment "Presecription ontology" ;
+  bdc:taxonomy "http://purl.obolibrary.org/obo/PDRO.owl"^^xsd:anyURI ;
+.
+bdc:taxonomy
+  rdf:type rdf:Property ;
+  rdfs:comment "taxonomy information including classification system and authority" ;
+  rdfs:domain bdc:Domain ;
+  rdfs:range xsd:anyURI ;
+.
+bdc:unitOfMeasure
+  rdf:type rdf:Property ;
+  rdfs:comment "standard unit or system of units by means of which a quantity is accounted for and expressed." ;
+  rdfs:domain bdc:DataQuality ;
+  rdfs:range xsd:string ;
+.
+bdc:usageDomain
+  rdf:type rdf:Property ;
+  rdfs:comment "usage domain information for the data catalogue" ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Domain ;
+.
+bdc:useDomain
+  rdf:type bdc:Domain ;
+  dc:title "Health" ;
+  bdc:comment "HL7's health data exchange" ;
+  bdc:taxonomy "http://hl7.org/fhir/"^^xsd:anyURI ;
+.
+owl:versionInfo
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range xsd:string ;
+.
+dcat:byteSize
+  rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:unsignedLong ;
+.
