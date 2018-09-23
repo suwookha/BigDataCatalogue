@@ -131,12 +131,18 @@ bdc:accessInformation
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "access information to dataset" ;
   rdfs:domain bdc:Distribution ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:anyURI ;
 .
 bdc:address
   rdf:type rdf:Property ;
   rdfs:comment "physical and email address at which the organization or individual may be contacted" ;
   rdfs:domain bdc:ContactType ;
+  rdfs:range xsd:string ;
+.
+bdc:comment
+  rdf:type rdf:Property ;
+  rdfs:comment "an additional information for domain" ;
+  rdfs:domain bdc:Domain ;
   rdfs:range xsd:string ;
 .
 bdc:contact
@@ -180,6 +186,12 @@ bdc:distribution
   rdfs:comment "information about the distributor of and options for obtaining the dataset" ;
   rdfs:domain bdc:Dataset ;
   rdfs:range bdc:Distribution ;
+.
+bdc:function
+  rdf:type rdf:Property ;
+  rdfs:comment "function performed by the responsible party" ;
+  rdfs:domain bdc:ResponsibleParty ;
+  rdfs:range xsd:string ;
 .
 bdc:hoursOfServices
   rdf:type rdf:Property ;
@@ -265,12 +277,6 @@ bdc:rightsStatement
   rdfs:domain bdc:DataRight ;
   rdfs:range xsd:string ;
 .
-bdc:function
-  rdf:type rdf:Property ;
-  rdfs:comment "function performed by the responsible party" ;
-  rdfs:domain bdc:ResponsibleParty ;
-  rdfs:range xsd:string ;
-.
 bdc:sampleData
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "location information about a sample data including URL" ;
@@ -303,7 +309,9 @@ bdc:usageDomain
 .
 owl:versionInfo
   rdfs:domain bdc:Catalogue ;
+  rdfs:range xsd:string ;
 .
 <http://www.w3.org/ns/dcat#byteSize>
   rdfs:domain bdc:Distribution ;
+  rdfs:range xsd:unsignedLong ;
 .
