@@ -8212,7 +8212,7 @@
 											"width": 347.5341796875,
 											"height": 13,
 											"underline": true,
-											"text": "distPrescription: BDC_Distribution"
+											"text": "prescriptionDist: BDC_Distribution"
 										},
 										{
 											"_type": "LabelView",
@@ -8419,7 +8419,7 @@
 											"width": 319.35693359375,
 											"height": 13,
 											"underline": true,
-											"text": "distScreen: BDC_Distribution"
+											"text": "screenDist: BDC_Distribution"
 										},
 										{
 											"_type": "LabelView",
@@ -12015,7 +12015,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "distPrescription",
+					"name": "prescriptionDist",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -12144,7 +12144,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "distScreen",
+					"name": "screenDist",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
