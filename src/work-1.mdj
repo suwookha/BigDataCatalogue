@@ -8506,7 +8506,7 @@
 											"top": 933,
 											"width": 319.35693359375,
 											"height": 13,
-											"text": "+format = csv",
+											"text": "+format = json",
 											"horizontalAlignment": 0
 										},
 										{
@@ -12200,7 +12200,7 @@
 							},
 							"name": "format",
 							"type": "",
-							"value": "csv"
+							"value": "json"
 						},
 						{
 							"_type": "UMLSlot",
