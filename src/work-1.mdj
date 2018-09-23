@@ -6940,7 +6940,7 @@
 											"top": 317,
 											"width": 165.50244140625,
 											"height": 13,
-											"text": "+issuedDate = 2010-01-01",
+											"text": "+issuedDate = 2018-03-01",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6957,7 +6957,7 @@
 											"top": 332,
 											"width": 165.50244140625,
 											"height": 13,
-											"text": "+modifiedDate = 2010-01-01",
+											"text": "+modifiedDate = 2018-4-15",
 											"horizontalAlignment": 0
 										}
 									],
@@ -11757,7 +11757,7 @@
 							},
 							"name": "issuedDate",
 							"type": "",
-							"value": "2010-01-01"
+							"value": "2018-03-01"
 						},
 						{
 							"_type": "UMLSlot",
@@ -11767,7 +11767,7 @@
 							},
 							"name": "modifiedDate",
 							"type": "",
-							"value": "2010-01-01"
+							"value": "2018-4-15"
 						}
 					]
 				},
