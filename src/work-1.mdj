@@ -6352,7 +6352,7 @@
 											"top": 491,
 											"width": 324.46044921875,
 											"height": 13,
-											"text": "+function = Manager",
+											"text": "+function = Management",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11669,7 +11669,7 @@
 							},
 							"name": "function",
 							"type": "",
-							"value": "Manager"
+							"value": "Management"
 						},
 						{
 							"_type": "UMLSlot",
