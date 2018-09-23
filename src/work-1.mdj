@@ -2363,7 +2363,7 @@
 											"top": 884,
 											"width": 205.587890625,
 											"height": 13,
-											"text": "+byteSize: int[1]",
+											"text": "+byteSize: unsigned long[1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5012,9 +5012,9 @@
 										"$ref": "AAAAAAFkW3DA8ZkSNUM="
 									},
 									"font": "Arial;13;0",
-									"left": 815,
+									"left": 814,
 									"top": 607,
-									"width": 19.5126953125,
+									"width": 20,
 									"height": 13,
 									"alpha": -1.0390720166053875,
 									"distance": 19.72308292331602,
@@ -5076,9 +5076,9 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 872,
+									"left": 871,
 									"top": 616,
-									"width": 19.5126953125,
+									"width": 20,
 									"height": 13,
 									"alpha": 0.9272951113349541,
 									"distance": 75,
@@ -5922,7 +5922,7 @@
 								"$ref": "AAAAAAFkWvmiAWNyJ+0="
 							},
 							"name": "byteSize",
-							"type": "int",
+							"type": "unsigned long",
 							"multiplicity": "1"
 						},
 						{
@@ -11585,6 +11585,7 @@
 								"$ref": "AAAAAAFlVuiDY09Z/SI="
 							},
 							"name": "title",
+							"type": "",
 							"value": "Health Data"
 						},
 						{
@@ -11594,6 +11595,7 @@
 								"$ref": "AAAAAAFlVuiDY09Z/SI="
 							},
 							"name": "description",
+							"type": "",
 							"value": "Data of prescription & screening"
 						},
 						{
