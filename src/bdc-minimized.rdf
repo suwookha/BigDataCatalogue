@@ -33,6 +33,7 @@
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#Catalogue"/>
     </rdf:Description>
     
@@ -42,6 +43,7 @@
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
     </owl:AnnotationProperty>
 
 
@@ -255,7 +257,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#accessInformation">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#Distribution"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>access information to dataset</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -389,6 +391,14 @@
         <rdfs:comment>information to the usage permissions being agreed to</rdfs:comment>
     </owl:DatatypeProperty>
     
+
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#comment">
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#Domain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>an additional information for domain</rdfs:comment>
+    </owl:DatatypeProperty>
 
 
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#function -->

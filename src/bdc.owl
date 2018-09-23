@@ -542,6 +542,9 @@
         <NamedIndividual IRI="http://purl.org/dc/terms/references"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#comment"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#phoneNumber"/>
     </Declaration>
     <Declaration>
@@ -1947,6 +1950,10 @@
         <Class IRI="#ContactType"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#comment"/>
+        <Class IRI="#Domain"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#function"/>
         <Class IRI="#ResponsibleParty"/>
     </DataPropertyDomain>
@@ -2092,10 +2099,14 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#accessInformation"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#comment"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2161,6 +2172,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#unitOfMeasure"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/ns/dcat#byteSize"/>
+        <Datatype abbreviatedIRI="xsd:unsignedLong"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
@@ -5159,6 +5174,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#comment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">an additional information for domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#contact</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">information required to enable contact with the responsible person and/or organization</Literal>
     </AnnotationAssertion>
@@ -5542,6 +5562,10 @@
     </SubAnnotationPropertyOf>
     <AnnotationPropertyRange>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
     </AnnotationPropertyRange>
     <AnnotationPropertyDomain>
