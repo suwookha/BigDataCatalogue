@@ -6766,7 +6766,7 @@
 											"top": 325,
 											"width": 361.98779296875,
 											"height": 13,
-											"text": "+address = Seoul",
+											"text": "+address = Seoul Korea",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11713,8 +11713,7 @@
 								"$ref": "AAAAAAFlVxN0k1HntNI="
 							},
 							"name": "address",
-							"type": "",
-							"value": "Seoul"
+							"value": "Seoul Korea"
 						},
 						{
 							"_type": "UMLSlot",
