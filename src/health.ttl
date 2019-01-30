@@ -1,4 +1,4 @@
-# baseURI: http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge
+# baseURI: http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/dc/terms/
 # imports: http://www.w3.org/2004/02/skos/core
@@ -6,7 +6,7 @@
 # imports: https://www.w3.org/2002/07/owl#
 # prefix: bdc
 
-@prefix bdc: <http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#> .
+@prefix bdc: <http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -58,7 +58,7 @@ dc:updateFrequency
   rdfs:domain bdc:Dataset ;
   rdfs:range xsd:string ;
 .
-<http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge>
+<http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue>
   rdf:type owl:Ontology ;
   owl:imports dc: ;
   owl:imports dct: ;

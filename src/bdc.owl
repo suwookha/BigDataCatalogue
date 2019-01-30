@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge"
+     xml:base="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge">
+     ontologyIRI="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue">
     <Prefix name="sh" IRI="http://www.w3.org/ns/shacl#"/>
-    <Prefix name="bdc" IRI="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalouge#"/>
+    <Prefix name="bdc" IRI="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
