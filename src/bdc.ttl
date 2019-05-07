@@ -57,7 +57,7 @@
   rdf:type owl:Ontology ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://purl.org/dc/terms/> ;
-  owl:imports <http://www.w3.org/ns/dcat#> ;
+owl:imports <http://www.w3.org/ns/dcat#> ;
   owl:imports <https://www.w3.org/2002/07/owl#> ;
 .
 bdc:Catalogue
@@ -128,18 +128,12 @@ bdc:accessInformation
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "access information to dataset" ;
   rdfs:domain bdc:Distribution ;
-  rdfs:range xsd:anyURI ;
+  rdfs:range xsd:string ;
 .
 bdc:address
   rdf:type rdf:Property ;
   rdfs:comment "physical and email address at which the organization or individual may be contacted" ;
   rdfs:domain bdc:ContactType ;
-  rdfs:range xsd:string ;
-.
-bdc:comment
-  rdf:type rdf:Property ;
-  rdfs:comment "an additional information for domain" ;
-  rdfs:domain bdc:Domain ;
   rdfs:range xsd:string ;
 .
 bdc:contact
@@ -184,12 +178,6 @@ bdc:distribution
   rdfs:domain bdc:Dataset ;
   rdfs:range bdc:Distribution ;
 .
-bdc:function
-  rdf:type rdf:Property ;
-  rdfs:comment "function performed by the responsible party" ;
-  rdfs:domain bdc:ResponsibleParty ;
-  rdfs:range xsd:string ;
-.
 bdc:hoursOfServices
   rdf:type rdf:Property ;
   rdfs:comment "time period (including time zone) when individuals can contact the organization or individual" ;
@@ -206,7 +194,7 @@ bdc:issuedDate
   rdf:type rdf:Property ;
   rdfs:comment "the issued date of listing the dataset in the catalogue" ;
   rdfs:domain bdc:Record ;
-  rdfs:range xsd:date ;
+  rdfs:range  xsd:date ;
 .
 bdc:license
   rdf:type rdf:Property ;
@@ -218,7 +206,7 @@ bdc:modifiedDate
   rdf:type rdf:Property ;
   rdfs:comment "the most resent modified date of data catalogue" ;
   rdfs:domain bdc:Record ;
-  rdfs:range xsd:date ;
+  rdfs:range  xsd:date ;
 .
 bdc:onlineResource
   rdf:type rdf:Property ;
@@ -268,10 +256,16 @@ bdc:responsibleParty
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:ResponsibleParty ;
 .
-bdc:rightsStatement
+bdc:rightStatement
   rdf:type rdf:Property ;
   rdfs:comment "information to the usage permissions being agreed to" ;
   rdfs:domain bdc:DataRight ;
+  rdfs:range xsd:string ;
+.
+bdc:function
+  rdf:type rdf:Property ;
+  rdfs:comment "function performed by the responsible party" ;
+  rdfs:domain bdc:ResponsibleParty ;
   rdfs:range xsd:string ;
 .
 bdc:sampleData
@@ -306,9 +300,7 @@ bdc:usageDomain
 .
 owl:versionInfo
   rdfs:domain bdc:Catalogue ;
-  rdfs:range xsd:string ;
 .
 <http://www.w3.org/ns/dcat#byteSize>
   rdfs:domain bdc:Distribution ;
-  rdfs:range xsd:unsignedLong ;
 .

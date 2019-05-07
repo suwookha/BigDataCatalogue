@@ -1,7 +1,6 @@
 # baseURI: http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/dc/terms/
-# imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/ns/dcat#
 # imports: https://www.w3.org/2002/07/owl#
 # prefix: bdc
@@ -13,7 +12,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dc:description
@@ -27,8 +25,8 @@ dc:format
 .
 dc:hasRelation
   rdf:type rdf:Property ;
-  rdfs:domain bdc:Dataset ;
-  rdfs:range bdc:Dataset ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Catalogue ;
 .
 dc:keyword
   rdf:type rdf:Property ;
@@ -61,10 +59,7 @@ dc:updateFrequency
 <http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue>
   rdf:type owl:Ontology ;
   owl:imports dc: ;
-  owl:imports dct: ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:imports dcat: ;
-  owl:imports <https://www.w3.org/2002/07/owl#> ;
+owl:imports <https://www.w3.org/2002/07/owl#> ;
 .
 bdc:Catalogue
   rdf:type rdfs:Class ;
