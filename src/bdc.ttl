@@ -22,8 +22,8 @@
 .
 <http://purl.org/dc/elements/1.1/hasRelation>
   rdf:type rdf:Property ;
-  rdfs:domain bdc:Dataset ;
-  rdfs:range bdc:Dataset ;
+  rdfs:domain bdc:Catalogue ;
+  rdfs:range bdc:Catalogue ;
 .
 <http://purl.org/dc/elements/1.1/keyword>
   rdf:type rdf:Property ;
