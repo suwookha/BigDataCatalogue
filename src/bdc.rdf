@@ -5,20 +5,14 @@
      xmlns:bdc="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:sh="http://www.w3.org/ns/shacl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:data-view="http://www.w3.org/2003/g/data-view#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue">
         <owl:imports rdf:resource="http://www.w3.org/ns/dcat#"/>
-        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="https://www.w3.org/2002/07/owl#"/>
     </owl:Ontology>
     
