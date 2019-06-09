@@ -43,9 +43,9 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->    
 
-    <!-- http://purl.org/dc/elements/1.1/hasRelation -->
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#hasRelation -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/hasRelation">
+    <owl:ObjectProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#hasRelation">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
         <rdfs:range rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
     </owl:ObjectProperty>
