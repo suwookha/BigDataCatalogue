@@ -1891,6 +1891,10 @@
         <Class IRI="#Catalogue"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#Dataset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#record"/>
         <Class IRI="#Catalogue"/>
     </ObjectPropertyDomain>
@@ -2033,6 +2037,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Catalogue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#Dataset"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#record"/>
