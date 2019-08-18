@@ -32,7 +32,7 @@
     <!-- http://www.w3.org/ns/dcat#byteSize -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
-        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
     </owl:AnnotationProperty>
 
     <!-- 
@@ -47,7 +47,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#hasRelation">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
         <rdfs:range rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
+        <rdfs:range rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>      
     </owl:ObjectProperty>
 
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#contact -->
@@ -157,7 +159,7 @@
 <!-- http://purl.org/dc/elements/1.1/format -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/format">
-        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -328,7 +330,14 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>location information about a sample data including URL</rdfs:comment>
     </owl:DatatypeProperty>
-    
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription">
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+        
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy -->
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy">
@@ -406,6 +415,18 @@
     <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Domain">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment>source and/ or usage information for data catalogue</rdfs:comment>
+    </owl:Class>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File -->
+
+    <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File">
+        <rdfs:subClassOf rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+    </owl:Class>    
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service -->
+
+    <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service">
+        <rdfs:subClassOf rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
     </owl:Class>
     
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Record -->
