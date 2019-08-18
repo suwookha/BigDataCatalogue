@@ -5467,7 +5467,7 @@
 											"top": 959,
 											"width": 116.6826171875,
 											"height": 13,
-											"text": "BCD_File"
+											"text": "BDC_File"
 										},
 										{
 											"_type": "LabelView",
@@ -5679,7 +5679,7 @@
 											"top": 967,
 											"width": 192.54345703125,
 											"height": 13,
-											"text": "BCD_Service"
+											"text": "BDC_Service"
 										},
 										{
 											"_type": "LabelView",
@@ -13215,7 +13215,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "BCD_File",
+					"name": "BDC_File",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -13260,7 +13260,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "BCD_Service",
+					"name": "BDC_Service",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
