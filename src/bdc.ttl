@@ -182,7 +182,9 @@ bdc:function
 bdc:hasRelation
   rdf:type rdf:Property ;
   rdfs:domain bdc:Catalogue ;
+  rdfs:domain bdc:Dataset ;
   rdfs:range bdc:Catalogue ;
+  rdfs:range bdc:Dataset ;
 .
 bdc:hoursOfServices
   rdf:type rdf:Property ;
