@@ -2305,7 +2305,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#accessInformation"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#address"/>
@@ -2369,7 +2369,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#serviceDescription"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#taxonomy"/>

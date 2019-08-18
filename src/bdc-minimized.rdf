@@ -207,7 +207,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#accessInformation">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>access information to dataset</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -335,7 +335,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
         
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy -->
