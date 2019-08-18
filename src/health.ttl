@@ -18,7 +18,7 @@ dc:description
   rdfs:range xsd:string ;
 .
 dc:format
-  rdfs:domain bdc:Distribution ;
+  rdfs:domain bdc:File ;
   rdfs:range xsd:string ;
 .
 dc:keyword
@@ -93,6 +93,10 @@ bdc:Domain
   rdfs:comment "source and/ or usage information for data catalogue" ;
   rdfs:subClassOf owl:Thing ;
 .
+bdc:File
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf bdc:Distribution ;
+.
 bdc:Record
   rdf:type rdfs:Class ;
   rdfs:comment "record information for the data catalogue" ;
@@ -107,6 +111,10 @@ bdc:SemiStructured
   rdf:type bdc:DataTypeCode ;
   rdfs:comment "data that is neither raw data, nor typed data in a conventional database system (e.g. XML, JSON)" ;
   rdfs:subClassOf owl:Thing ;
+.
+bdc:Service
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf bdc:Distribution ;
 .
 bdc:Structured
   rdf:type bdc:DataTypeCode ;
@@ -172,6 +180,23 @@ bdc:dataset
   rdfs:domain bdc:Catalogue ;
   rdfs:range bdc:Dataset ;
 .
+bdc:distPrescription
+  rdf:type bdc:Service ;
+  bdc:accessInformation "http://www.nhis.or.kr/api/prescription"^^xsd:anyURI ;
+  bdc:dataRight bdc:right ;
+  bdc:dataType bdc:Structured ;
+  bdc:sampleData "http://www.nhis.or.kr/prescription.sample.csv"^^xsd:anyURI ;
+  bdc:serviceDescription "http://www.nhis.or.kr/api/prescription.json"^^xsd:anyURI ;
+.
+bdc:distScreen
+  rdf:type bdc:File ;
+  dc:format "csv" ;
+  bdc:accessInformation "http://www.nhis.or.kr/screen.csv"^^xsd:anyURI ;
+  bdc:dataRight bdc:right ;
+  bdc:dataType bdc:Structured ;
+  bdc:sampleData "http://www.nhis.or.kr/screen.sample.csv"^^xsd:anyURI ;
+  dcat:byteSize "12000000"^^xsd:unsignedLong ;
+.
 bdc:distribution
   rdf:type rdf:Property ;
   rdfs:comment "information about the distributor of and options for obtaining the dataset" ;
@@ -187,7 +212,9 @@ bdc:function
 bdc:hasRelation
   rdf:type rdf:Property ;
   rdfs:domain bdc:Catalogue ;
+  rdfs:domain bdc:Dataset ;
   rdfs:range bdc:Catalogue ;
+  rdfs:range bdc:Dataset ;
 .
 bdc:healthCatalogue
   rdf:type bdc:Catalogue ;
@@ -267,15 +294,6 @@ bdc:positionName
   rdfs:domain bdc:ResponsibleParty ;
   rdfs:range xsd:string ;
 .
-bdc:prescriptionDist
-  rdf:type bdc:Distribution ;
-  dc:format "csv" ;
-  bdc:accessInformation "http://www.nhis.or.kr/prescription.csv"^^xsd:anyURI ;
-  bdc:dataRight bdc:right ;
-  bdc:dataType bdc:Structured ;
-  bdc:sampleData "http://www.nhis.or.kr/prescription.sample.csv"^^xsd:anyURI ;
-  dcat:byteSize "3999200"^^xsd:unsignedLong ;
-.
 bdc:prescriptionSet
   rdf:type bdc:Dataset ;
   dc:description "Disease prescription data" ;
@@ -284,6 +302,7 @@ bdc:prescriptionSet
   dc:title "Disease prescription" ;
   dc:updateFrequency "weekly" ;
   bdc:contactPoint bdc:rParty ;
+  bdc:distribution bdc:distPrescription ;
 .
 bdc:quality
   rdf:type bdc:DataQuality ;
@@ -345,15 +364,6 @@ bdc:sampleData
   rdfs:domain bdc:Distribution ;
   rdfs:range xsd:anyURI ;
 .
-bdc:screenDist
-  rdf:type bdc:Distribution ;
-  dc:format "json" ;
-  bdc:accessInformation "http://www.nhis.or.kr/screen.csv"^^xsd:anyURI ;
-  bdc:dataRight bdc:right ;
-  bdc:dataType bdc:Structured ;
-  bdc:sampleData "http://www.nhis.or.kr/screen.sample.csv"^^xsd:anyURI ;
-  dcat:byteSize "12000000"^^xsd:unsignedLong ;
-.
 bdc:screenSet
   rdf:type bdc:Dataset ;
   dc:description "Health screening data" ;
@@ -362,7 +372,12 @@ bdc:screenSet
   dc:title "Health screening" ;
   dc:updateFrequency "monthly" ;
   bdc:contactPoint bdc:rParty ;
-  bdc:distribution bdc:screenDist ;
+  bdc:distribution bdc:distScreen ;
+.
+bdc:serviceDescription
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain bdc:Service ;
+  rdfs:range xsd:anyURI ;
 .
 bdc:sourceDomain
   rdf:type rdf:Property ;
@@ -405,6 +420,6 @@ owl:versionInfo
   rdfs:range xsd:string ;
 .
 dcat:byteSize
-  rdfs:domain bdc:Distribution ;
+  rdfs:domain bdc:File ;
   rdfs:range xsd:unsignedLong ;
 .
