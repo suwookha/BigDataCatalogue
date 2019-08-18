@@ -216,7 +216,7 @@ bdc:hasRelation
   rdfs:range bdc:Catalogue ;
   rdfs:range bdc:Dataset ;
 .
-bdc:healthCatalogue
+bdc:catalogue
   rdf:type bdc:Catalogue ;
   dc:description "Health data of prescription & screening" ;
   dc:language "ko_KR"^^dct:RFC5646 ;
