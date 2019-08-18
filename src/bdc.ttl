@@ -17,7 +17,7 @@
   rdfs:range xsd:string ;
 .
 <http://purl.org/dc/elements/1.1/format>
-  rdfs:domain bdc:Distribution ;
+  rdfs:domain bdc:File ;
   rdfs:range xsd:string ;
 .
 <http://purl.org/dc/elements/1.1/keyword>
@@ -94,6 +94,10 @@ bdc:Domain
   rdfs:comment "source and/ or usage information for data catalogue" ;
   rdfs:subClassOf owl:Thing ;
 .
+bdc:File
+  rdf:type owl:Class ;
+  rdfs:subClassOf bdc:Distribution ;
+.
 bdc:Record
   rdf:type rdfs:Class ;
   rdfs:comment "record information for the data catalogue" ;
@@ -108,6 +112,10 @@ bdc:SemiStructured
   rdf:type bdc:DataTypeCode ;
   rdfs:comment "data that is neither raw data, nor typed data in a conventional database system (e.g. XML, JSON)" ;
   rdfs:subClassOf owl:Thing ;
+.
+bdc:Service
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf bdc:Distribution ;
 .
 bdc:Structured
   rdf:type bdc:DataTypeCode ;
@@ -276,6 +284,11 @@ bdc:sampleData
   rdfs:domain bdc:Distribution ;
   rdfs:range xsd:anyURI ;
 .
+bdc:serviceDescription
+  rdf:type rdf:Property ;
+  rdfs:domain bdc:Service ;
+  rdfs:range xsd:string ;
+.
 bdc:sourceDomain
   rdf:type rdf:Property ;
   rdfs:comment "source domain information for the data catalogue" ;
@@ -304,5 +317,5 @@ owl:versionInfo
   rdfs:domain bdc:Catalogue ;
 .
 <http://www.w3.org/ns/dcat#byteSize>
-  rdfs:domain bdc:Distribution ;
+  rdfs:domain bdc:File ;
 .
