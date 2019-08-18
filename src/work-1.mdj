@@ -9178,7 +9178,7 @@
 											"top": 867,
 											"width": 384.36962890625,
 											"height": 13,
-											"text": "+serviceDescription = http://www.nhis.or.kr/prescription.json",
+											"text": "+serviceDescription = http://www.nhis.or.kr/api/prescription.json",
 											"horizontalAlignment": 0
 										}
 									],
@@ -12894,7 +12894,7 @@
 							},
 							"name": "serviceDescription",
 							"type": "",
-							"value": "http://www.nhis.or.kr/prescription.json"
+							"value": "http://www.nhis.or.kr/api/prescription.json"
 						}
 					]
 				},
