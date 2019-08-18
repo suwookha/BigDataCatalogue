@@ -1064,7 +1064,7 @@
     <!-- http://purl.org/dc/elements/1.1/format -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/format">
-        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1384,6 +1384,15 @@
     
 
 
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription">
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy -->
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy">
@@ -1407,7 +1416,7 @@
     <!-- http://www.w3.org/ns/dcat#byteSize -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#byteSize">
-        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
     </rdf:Description>
     
 
@@ -1656,6 +1665,14 @@
     
 
 
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File -->
+
+    <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File">
+        <rdfs:subClassOf rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Record -->
 
     <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Record">
@@ -1678,6 +1695,14 @@
 
     <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#SemiStructured">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service -->
+
+    <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service">
+        <rdfs:subClassOf rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
     </owl:Class>
     
 
@@ -2679,38 +2704,38 @@
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Description</rdfs:label>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Format</rdfs:label>
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
         <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Agent">
         <rdfs:label xml:lang="en">Agent</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:description xml:lang="en">Examples of Agent include person, organization, and software agent.</terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Agent-001"/>
     </rdf:Description>
@@ -2718,8 +2743,8 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Agent Class</rdfs:label>
         <rdfs:comment xml:lang="en">A group of agents.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#AgentClass-003"/>
         <terms:description xml:lang="en">Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#AgentClass-003"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/BibliographicResource">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -2737,8 +2762,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/FileFormat">
         <terms:description xml:lang="en">Examples include the formats defined by the list of Internet Media Types.</terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#FileFormat-001"/>
-        <rdfs:label xml:lang="en">File Format</rdfs:label>
         <rdfs:comment xml:lang="en">A digital resource format.</rdfs:comment>
+        <rdfs:label xml:lang="en">File Format</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Frequency">
@@ -2764,8 +2789,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/ISO639-3">
         <rdfs:label xml:lang="en">ISO 639-3</rdfs:label>
         <rdfs:comment xml:lang="en">The set of three-letter codes listed in ISO 639-3 for the representation of names of languages.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#ISO639-3-001"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#ISO639-3-001"/>
         <rdfs:seeAlso rdf:resource="http://www.sil.org/iso639-3/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Jurisdiction">
@@ -2775,8 +2800,8 @@
         <rdfs:comment xml:lang="en">The extent or range of judicial, law enforcement, or other authority.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
-        <rdfs:label xml:lang="en">License Document</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">License Document</rdfs:label>
         <rdfs:comment xml:lang="en">A legal document giving official permission to do something with a Resource.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#LicenseDocument-001"/>
     </rdf:Description>
@@ -2820,12 +2845,12 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/MethodOfInstruction">
         <rdfs:label xml:lang="en">Method of Instruction</rdfs:label>
         <rdfs:comment xml:lang="en">A process that is used to engender knowledge, attitudes, and skills.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#MethodOfInstruction-001"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#MethodOfInstruction-001"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Period">
-        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-period/"/>
         <rdfs:comment xml:lang="en">The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-period/"/>
         <rdfs:label xml:lang="en">DCMI Period</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Period-003"/>
@@ -2857,16 +2882,16 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Policy">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Policy</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Policy-001"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ProvenanceStatement">
         <rdfs:label xml:lang="en">Provenance Statement</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#ProvenanceStatement-001"/>
+        <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RFC1766">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -2888,8 +2913,8 @@
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#RFC4646-001"/>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">RFC 4646</rdfs:label>
         <rdfs:comment xml:lang="en">The set of tags constructed according to RFC 4646 for the identification of languages.</rdfs:comment>
+        <rdfs:label xml:lang="en">RFC 4646</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RFC5646">
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc5646.txt"/>
@@ -2919,8 +2944,8 @@
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Standard-001"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/URI">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc3986.txt"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#URI-003"/>
         <rdfs:label xml:lang="en">URI</rdfs:label>
@@ -2946,8 +2971,8 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accrualMethod">
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#accrualMethod-003"/>
         <rdfs:label xml:lang="en">Accrual Method</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#accrualMethod-003"/>
         <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
@@ -2959,8 +2984,8 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPolicy">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:comment xml:lang="en">The policy governing the addition of items to a collection.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#accrualPolicy-003"/>
+        <rdfs:comment xml:lang="en">The policy governing the addition of items to a collection.</rdfs:comment>
         <rdfs:label xml:lang="en">Accrual Policy</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/alternative">
@@ -3005,8 +3030,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/coverage">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverageT-001"/>
-        <rdfs:label xml:lang="en">Coverage</rdfs:label>
         <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
         <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/created">
@@ -3024,8 +3049,8 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/date">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#dateT-001"/>
         <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#dateT-001"/>
         <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
         <rdfs:label xml:lang="en">Date</rdfs:label>
     </rdf:Description>
@@ -3114,8 +3139,8 @@
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isFormatOf-003"/>
         <rdfs:comment xml:lang="en">A related resource that is substantially the same as the described resource, but in another format.</rdfs:comment>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Is Format Of</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
         <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
@@ -3162,8 +3187,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/language">
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#languageT-001"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/license">
@@ -3216,8 +3241,8 @@
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relationT-001"/>
-        <rdfs:label xml:lang="en">Relation</rdfs:label>
         <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/replaces">
@@ -3252,8 +3277,8 @@
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#sourceT-001"/>
-        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
         <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
         <rdfs:label xml:lang="en">Spatial Coverage</rdfs:label>
@@ -3277,8 +3302,8 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/temporal">
         <rdfs:label xml:lang="en">Temporal Coverage</rdfs:label>
-        <rdfs:comment xml:lang="en">Temporal characteristics of the resource.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#temporal-003"/>
+        <rdfs:comment xml:lang="en">Temporal characteristics of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/title">
@@ -3297,8 +3322,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/terms/valid">
         <rdfs:comment xml:lang="en">Date (often a range) of validity of a resource.</rdfs:comment>
         <rdfs:label xml:lang="en">Date Valid</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#valid-003"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#SemiStructured">
         <rdfs:comment>data that is neither raw data, nor typed data in a conventional database system (e.g. XML, JSON)</rdfs:comment>

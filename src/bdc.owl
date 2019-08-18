@@ -105,10 +105,16 @@
         <Class IRI="#Domain"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#File"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Record"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ResponsibleParty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#accessInformation"/>
@@ -672,6 +678,9 @@
         <ObjectProperty abbreviatedIRI="rdfs:member"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#serviceDescription"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#rightStatement"/>
     </Declaration>
     <Declaration>
@@ -860,6 +869,10 @@
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#File"/>
+        <Class IRI="#Distribution"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Record"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
@@ -870,6 +883,10 @@
     <SubClassOf>
         <Class IRI="#SemiStructured"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class IRI="#Distribution"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Structured"/>
@@ -2108,7 +2125,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://purl.org/dc/elements/1.1/format"/>
-        <Class IRI="#Distribution"/>
+        <Class IRI="#File"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://purl.org/dc/elements/1.1/keyword"/>
@@ -2195,6 +2212,10 @@
         <Class IRI="#Distribution"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#serviceDescription"/>
+        <Class IRI="#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#taxonomy"/>
         <Class IRI="#Domain"/>
     </DataPropertyDomain>
@@ -2204,7 +2225,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.w3.org/ns/dcat#byteSize"/>
-        <Class IRI="#Distribution"/>
+        <Class IRI="#File"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -2345,6 +2366,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#sampleData"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#serviceDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#taxonomy"/>
