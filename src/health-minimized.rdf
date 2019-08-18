@@ -19,7 +19,7 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#healthCatalogue -->
 
-<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#healthCatalogue">
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#catalogue">
   <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
   <dataQuality rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality"/>
   <dataset rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet"/>
@@ -41,7 +41,8 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 </owl:NamedIndividual>
 
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#myContact -->
-  <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#myContact">
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#myContact">
   <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#ContactType"/>
   <address>Seoul Korea</address>
   <hoursOfServices>09:00~18:00</hoursOfServices>
@@ -49,16 +50,29 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
   <phoneNumber>012-123-3456</phoneNumber>
 </owl:NamedIndividual>
 
-<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionDist -->
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription -->
 
- <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionDist">
-  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service"/>
+  <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
+  <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
+  <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/api/prescription</accessInformation>
+  <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</sampleData>
+  <serviceDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/api/prescription.json</serviceDescription>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
   <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
   <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
   <dc:format>csv</dc:format>
-  <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.csv</accessInformation>
-  <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</sampleData>
-  <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3999200</dcat:byteSize>
+  <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv
+  </accessInformation>
+  <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv
+  </sampleData>
+  <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</dcat:byteSize>
 </owl:NamedIndividual>
 
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet -->
@@ -71,6 +85,7 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
   <dc:temporalCoverage>2013.1.1 ~ 2017.12.31</dc:temporalCoverage>
   <dc:updateFrequency>weekly</dc:updateFrequency>
   <dc:title>Disease prescription</dc:title>
+  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription"/>
 </owl:NamedIndividual>
 
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality -->
@@ -109,24 +124,12 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
   <rightsStatement>Public access</rightsStatement>
 </owl:NamedIndividual>
 
-<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenDist -->
-
-<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenDist">
-  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
-  <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
-  <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
-  <dc:format>json</dc:format>
-  <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv</accessInformation>
-  <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv</sampleData>
-  <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</dcat:byteSize>
-</owl:NamedIndividual>
-
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet -->
 
 <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet">
   <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
   <contactPoint rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
-  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenDist"/>
+  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen"/>
   <dc:description>Health screening data</dc:description>
   <dc:keyword>health</dc:keyword>
   <dc:temporalCoverage>2010.1.1~2017.12.31</dc:temporalCoverage>

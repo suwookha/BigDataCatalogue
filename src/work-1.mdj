@@ -6901,7 +6901,7 @@
 											"width": 190.7724609375,
 											"height": 13,
 											"underline": true,
-											"text": "c: BDC_Catalogue"
+											"text": "catalogue: BDC_Catalogue"
 										},
 										{
 											"_type": "LabelView",
@@ -7092,7 +7092,7 @@
 											"width": 324.46044921875,
 											"height": 13,
 											"underline": true,
-											"text": "r: BDC_ResponsibleParty"
+											"text": "rParty: BDC_ResponsibleParty"
 										},
 										{
 											"_type": "LabelView",
@@ -11313,7 +11313,7 @@
 											"width": 176.31884765625,
 											"height": 13,
 											"underline": true,
-											"text": "usageDomain"
+											"text": "useDomain: BDC_Domain"
 										},
 										{
 											"_type": "LabelView",
@@ -12142,7 +12142,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "c",
+					"name": "catalogue",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -12385,7 +12385,6 @@
 							}
 						}
 					],
-					"stereotype": "",
 					"classifier": {
 						"$ref": "AAAAAAFkWrd5gM1TQME="
 					},
@@ -12438,7 +12437,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "r",
+					"name": "rParty",
 					"classifier": {
 						"$ref": "AAAAAAFkWvj/72LoMM8="
 					},
@@ -13158,7 +13157,10 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "usageDomain",
+					"name": "useDomain",
+					"classifier": {
+						"$ref": "AAAAAAFkWsDLcc2dlSw="
+					},
 					"slots": [
 						{
 							"_type": "UMLSlot",

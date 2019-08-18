@@ -41,16 +41,25 @@
         <Class IRI="#Domain"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#File"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Record"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ResponsibleParty"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#accessInformation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#sampleData"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#serviceDescription"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:description"/>
@@ -269,9 +278,6 @@
         <DataProperty IRI="#unitOfMeasure"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#prescriptionDist"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#license"/>
     </Declaration>
     <Declaration>
@@ -324,6 +330,12 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.w3.org/2003/g/data-view#namespaceTransformation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#distPrescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#distScreen"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="owl:maxQualifiedCardinality"/>
@@ -385,9 +397,6 @@
     <Declaration>
         <NamedIndividual IRI="#Structured"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#screenDist"/>
-    </Declaration>
     <SubClassOf>
         <Class IRI="#Catalogue"/>
         <Class abbreviatedIRI="owl:Thing"/>
@@ -421,6 +430,10 @@
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#File"/>
+        <Class IRI="#Distribution"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Record"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
@@ -431,6 +444,10 @@
     <SubClassOf>
         <Class IRI="#SemiStructured"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class IRI="#Distribution"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Structured"/>
@@ -453,6 +470,14 @@
         <NamedIndividual IRI="#Unstructured"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#distPrescription"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#File"/>
+        <NamedIndividual IRI="#distScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Catalogue"/>
         <NamedIndividual IRI="#healthCatalogue"/>
     </ClassAssertion>
@@ -463,10 +488,6 @@
     <ClassAssertion>
         <Class IRI="#ContactType"/>
         <NamedIndividual IRI="#myContact"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Distribution"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dataset"/>
@@ -489,10 +510,6 @@
         <NamedIndividual IRI="#right"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Distribution"/>
-        <NamedIndividual IRI="#screenDist"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Dataset"/>
         <NamedIndividual IRI="#screenSet"/>
     </ClassAssertion>
@@ -504,6 +521,26 @@
         <Class IRI="#Domain"/>
         <NamedIndividual IRI="#useDomain"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dataRight"/>
+        <NamedIndividual IRI="#distPrescription"/>
+        <NamedIndividual IRI="#right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dataType"/>
+        <NamedIndividual IRI="#distPrescription"/>
+        <NamedIndividual IRI="#Structured"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dataRight"/>
+        <NamedIndividual IRI="#distScreen"/>
+        <NamedIndividual IRI="#right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dataType"/>
+        <NamedIndividual IRI="#distScreen"/>
+        <NamedIndividual IRI="#Structured"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#dataQuality"/>
         <NamedIndividual IRI="#healthCatalogue"/>
@@ -540,34 +577,19 @@
         <NamedIndividual IRI="#useDomain"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#dataRight"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
-        <NamedIndividual IRI="#right"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#dataType"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
-        <NamedIndividual IRI="#Structured"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contactPoint"/>
         <NamedIndividual IRI="#prescriptionSet"/>
         <NamedIndividual IRI="#rParty"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#distribution"/>
+        <NamedIndividual IRI="#prescriptionSet"/>
+        <NamedIndividual IRI="#distPrescription"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contact"/>
         <NamedIndividual IRI="#rParty"/>
         <NamedIndividual IRI="#myContact"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#dataRight"/>
-        <NamedIndividual IRI="#screenDist"/>
-        <NamedIndividual IRI="#right"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#dataType"/>
-        <NamedIndividual IRI="#screenDist"/>
-        <NamedIndividual IRI="#Structured"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#contactPoint"/>
@@ -577,8 +599,43 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#distribution"/>
         <NamedIndividual IRI="#screenSet"/>
-        <NamedIndividual IRI="#screenDist"/>
+        <NamedIndividual IRI="#distScreen"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accessInformation"/>
+        <NamedIndividual IRI="#distPrescription"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/api/prescription</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sampleData"/>
+        <NamedIndividual IRI="#distPrescription"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#serviceDescription"/>
+        <NamedIndividual IRI="#distPrescription"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/api/prescription.json</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dc:format"/>
+        <NamedIndividual IRI="#distScreen"/>
+        <Literal>csv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accessInformation"/>
+        <NamedIndividual IRI="#distScreen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sampleData"/>
+        <NamedIndividual IRI="#distScreen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dcat:byteSize"/>
+        <NamedIndividual IRI="#distScreen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:description"/>
         <NamedIndividual IRI="#healthCatalogue"/>
@@ -603,26 +660,6 @@
         <DataProperty IRI="#phoneNumber"/>
         <NamedIndividual IRI="#myContact"/>
         <Literal>012-123-3456</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="dc:format"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
-        <Literal>csv</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#accessInformation"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.csv</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#sampleData"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="dcat:byteSize"/>
-        <NamedIndividual IRI="#prescriptionDist"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedLong">3999200</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:description"/>
@@ -698,26 +735,6 @@
         <DataProperty IRI="#rightsStatement"/>
         <NamedIndividual IRI="#right"/>
         <Literal>Public access</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="dc:format"/>
-        <NamedIndividual IRI="#screenDist"/>
-        <Literal>json</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#accessInformation"/>
-        <NamedIndividual IRI="#screenDist"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#sampleData"/>
-        <NamedIndividual IRI="#screenDist"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="dcat:byteSize"/>
-        <NamedIndividual IRI="#screenDist"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dc:description"/>
@@ -796,6 +813,10 @@
         <Class IRI="#Catalogue"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#Dataset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#record"/>
         <Class IRI="#Catalogue"/>
     </ObjectPropertyDomain>
@@ -848,6 +869,10 @@
         <Class IRI="#Catalogue"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#Dataset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#record"/>
         <Class IRI="#Record"/>
     </ObjectPropertyRange>
@@ -873,7 +898,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="dc:format"/>
-        <Class IRI="#Distribution"/>
+        <Class IRI="#File"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="dc:keyword"/>
@@ -956,6 +981,10 @@
         <Class IRI="#Distribution"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#serviceDescription"/>
+        <Class IRI="#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#taxonomy"/>
         <Class IRI="#Domain"/>
     </DataPropertyDomain>
@@ -965,7 +994,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="dcat:byteSize"/>
-        <Class IRI="#Distribution"/>
+        <Class IRI="#File"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="dc:description"/>
@@ -1053,6 +1082,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#sampleData"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#serviceDescription"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>

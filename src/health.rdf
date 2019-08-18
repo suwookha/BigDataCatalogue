@@ -209,7 +209,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#hasRelation">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
         <rdfs:range rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
+        <rdfs:range rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
     </owl:ObjectProperty>
     
 
@@ -286,7 +288,7 @@
     <!-- http://purl.org/dc/elements/1.1/format -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/format">
-        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</dct:description>
         <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
@@ -500,6 +502,15 @@
     
 
 
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#serviceDescription">
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy -->
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#taxonomy">
@@ -523,7 +534,7 @@
     <!-- http://www.w3.org/ns/dcat#byteSize -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
-        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
     </owl:DatatypeProperty>
     
@@ -617,6 +628,14 @@
     
 
 
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File -->
+
+    <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File">
+        <rdfs:subClassOf rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Record -->
 
     <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Record">
@@ -639,6 +658,14 @@
 
     <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#SemiStructured">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service -->
+
+    <owl:Class rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service">
+        <rdfs:subClassOf rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
     </owl:Class>
     
 
@@ -694,6 +721,33 @@
     
 
 
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription">
+        <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Service"/>
+        <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
+        <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
+        <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/api/prescription</accessInformation>
+        <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</sampleData>
+        <serviceDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/api/prescription.json</serviceDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen -->
+
+    <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen">
+        <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#File"/>
+        <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
+        <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
+        <dc:format>csv</dc:format>
+        <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv</accessInformation>
+        <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv</sampleData>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</dcat:byteSize>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#healthCatalogue -->
 
     <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#healthCatalogue">
@@ -733,25 +787,12 @@
     
 
 
-    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionDist -->
-
-    <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionDist">
-        <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
-        <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
-        <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
-        <dc:format>csv</dc:format>
-        <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.csv</accessInformation>
-        <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</sampleData>
-        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3999200</dcat:byteSize>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet -->
 
     <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet">
         <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
         <contactPoint rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
+        <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription"/>
         <dc:description>Disease prescription data</dc:description>
         <dc:keyword>prescription</dc:keyword>
         <dc:temporalCoverage>2013.1.1 ~ 2017.12.31</dc:temporalCoverage>
@@ -805,26 +846,12 @@
     
 
 
-    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenDist -->
-
-    <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenDist">
-        <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
-        <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
-        <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
-        <dc:format>json</dc:format>
-        <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv</accessInformation>
-        <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv</sampleData>
-        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</dcat:byteSize>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet -->
 
     <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet">
         <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
         <contactPoint rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
-        <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenDist"/>
+        <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen"/>
         <dc:description>Health screening data</dc:description>
         <dc:keyword>health</dc:keyword>
         <dc:temporalCoverage>2010.1.1~2017.12.31</dc:temporalCoverage>
@@ -871,8 +898,8 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
         <rdfs:label xml:lang="en">Contributor</rdfs:label>
-        <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
         <dct:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</dct:description>
         <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
@@ -886,8 +913,8 @@
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
         <dct:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</dct:description>
-        <rdfs:label xml:lang="en">Coverage</rdfs:label>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dct:issued>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
@@ -921,10 +948,10 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dct:issued>
-        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
         <dct:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</dct:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
@@ -942,11 +969,11 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
         <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
-        <dct:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </dct:description>
         <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <dct:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </dct:description>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dct:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
@@ -963,8 +990,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
         <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
         <dct:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</dct:description>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dct:issued>
@@ -981,10 +1008,10 @@
         <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
-        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
         <dct:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
-        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
         <dct:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</dct:description>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dct:issued>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:modified>
