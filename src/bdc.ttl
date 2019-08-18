@@ -131,7 +131,7 @@ bdc:accessInformation
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "access information to dataset" ;
   rdfs:domain bdc:Distribution ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:anyURI ;
 .
 bdc:address
   rdf:type rdf:Property ;
@@ -287,7 +287,7 @@ bdc:sampleData
 bdc:serviceDescription
   rdf:type rdf:Property ;
   rdfs:domain bdc:Service ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:anyURI ;
 .
 bdc:sourceDomain
   rdf:type rdf:Property ;
