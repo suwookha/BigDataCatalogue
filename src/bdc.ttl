@@ -6,43 +6,45 @@
 # prefix: bdc
 
 @prefix bdc: <http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.org/dc/elements/1.1/description>
+dc:description
   rdfs:domain bdc:Catalogue ;
   rdfs:domain bdc:Dataset ;
   rdfs:range xsd:string ;
 .
-<http://purl.org/dc/elements/1.1/format>
+dc:format
   rdfs:domain bdc:File ;
   rdfs:range xsd:string ;
 .
-<http://purl.org/dc/elements/1.1/keyword>
+dc:keyword
   rdf:type rdf:Property ;
   rdfs:comment "commonly used word(s) used to describe the dataset" ;
   rdfs:domain bdc:Dataset ;
   rdfs:range xsd:string ;
 .
-<http://purl.org/dc/elements/1.1/language>
+dc:language
   rdfs:domain bdc:Catalogue ;
   rdfs:range <http://purl.org/dc/terms/RFC5646> ;
 .
-<http://purl.org/dc/elements/1.1/temporalCoverage>
+dc:temporalCoverage
   rdf:type rdf:Property ;
   rdfs:comment "time period (including time zone) when the dataset was captured" ;
   rdfs:domain bdc:Dataset ;
   rdfs:range xsd:string ;
 .
-<http://purl.org/dc/elements/1.1/title>
+dc:title
   rdfs:domain bdc:Catalogue ;
   rdfs:domain bdc:Dataset ;
   rdfs:domain bdc:Domain ;
   rdfs:range xsd:string ;
 .
-<http://purl.org/dc/elements/1.1/updateFrequency>
+dc:updateFrequency
   rdf:type rdf:Property ;
   rdfs:comment "rate of occurrence of dataset update" ;
   rdfs:domain bdc:Dataset ;
@@ -50,7 +52,7 @@
 .
 <http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue>
   rdf:type owl:Ontology ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports dc: ;
   owl:imports <http://purl.org/dc/terms/> ;
   owl:imports <http://www.w3.org/ns/dcat#> ;
   owl:imports <https://www.w3.org/2002/07/owl#> ;
@@ -315,7 +317,9 @@ bdc:usageDomain
 .
 owl:versionInfo
   rdfs:domain bdc:Catalogue ;
+  rdfs:range xsd:string ;
 .
-<http://www.w3.org/ns/dcat#byteSize>
+dcat:byteSize
   rdfs:domain bdc:File ;
+  rdfs:range xsd:unsignedLong ;
 .
