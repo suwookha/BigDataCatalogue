@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#"
+  xml:base="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue"
+  xmlns:schema="http://schema.org/"
+  xmlns:bdc="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<owl:Ontology rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue">
+  <owl:imports rdf:resource="http://www.w3.org/ns/dcat#"/>
+<owl:imports rdf:resource="https://www.w3.org/2002/07/owl#"/>
+</owl:Ontology>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#healthCatalogue -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#catalogue">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Catalogue"/>
+  <dataQuality rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality"/>
+  <dataset rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet"/>
+  <dataset rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet"/>
+  <record rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#record1"/>
+  <responsibleParty rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
+  <sourceDomain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#srcDomain"/>
+  <usageDomain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#useDomain"/>
+  <dc:description>Health data of prescription &amp; screening</dc:description>
+  <dc:language rdf:datatype="http://purl.org/dc/terms/RFC5646">ko_KR</dc:language>
+  <dc:title>Health Data</dc:title>
+  <owl:versionInfo>1.0.0</owl:versionInfo>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#ko_KR -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#ko_KR">
+  <rdf:type rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#myContact -->
+  <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#myContact">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#ContactType"/>
+  <address>Seoul Korea</address>
+  <hoursOfServices>09:00~18:00</hoursOfServices>
+  <onlineResource rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.nhis.or.kr</onlineResource>
+  <phoneNumber>012-123-3456</phoneNumber>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription -->
+
+ <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+  <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
+  <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
+  <dc:format>csv</dc:format>
+  <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.csv</accessInformation>
+  <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/prescription.sample.csv</sampleData>
+  <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3999200</dcat:byteSize>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
+  <contactPoint rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
+  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription"/>
+  <dc:description>Disease prescription data</dc:description>
+  <dc:keyword>prescription</dc:keyword>
+  <dc:temporalCoverage>2013.1.1 ~ 2017.12.31</dc:temporalCoverage>
+  <dc:updateFrequency>weekly</dc:updateFrequency>
+  <dc:title>Disease prescription</dc:title>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#DataQuality"/>
+  <qualityRequirement>under 1% missing fields</qualityRequirement>
+  <qualityResult>passed (99.3%)</qualityResult>
+  <unitOfMeasure>percent</unitOfMeasure>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#ResponsibleParty"/>
+  <contact rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#myContact"/>
+  <function>Management</function>
+  <individualName>John</individualName>
+  <organizationName>National Health Insurance Service</organizationName>
+  <positionName>Manager</positionName>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#record1 -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#record1">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Record"/>
+  <issuedDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-01</issuedDate>
+  <modifiedDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-15</modifiedDate>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#DataRight"/>
+  <license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PDRO.owl</license>
+  <rightsStatement>Public access</rightsStatement>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Distribution"/>
+  <dataRight rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#right"/>
+  <dataType rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Structured"/>
+  <dc:format>json</dc:format>
+  <accessInformation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.csv</accessInformation>
+  <sampleData rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.nhis.or.kr/screen.sample.csv</sampleData>
+  <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">12000000</dcat:byteSize>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#screenSet">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
+  <contactPoint rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
+  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distScreen"/>
+  <dc:description>Health screening data</dc:description>
+  <dc:keyword>health</dc:keyword>
+  <dc:temporalCoverage>2010.1.1~2017.12.31</dc:temporalCoverage>
+  <dc:updateFrequency>monthly</dc:updateFrequency>
+  <dc:title>Health screening</dc:title>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#srcDomain -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#srcDomain">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Domain"/>
+  <comment>Presecription ontology</comment>
+  <taxonomy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PDRO.owl</taxonomy>
+  <dc:title>Medical</dc:title>
+</owl:NamedIndividual>
+
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#useDomain -->
+
+<owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#useDomain">
+  <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Domain"/>
+  <comment>HL7&apos;s health data exchange</comment>
+  <taxonomy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://hl7.org/fhir/</taxonomy>
+  <dc:title>Health</dc:title>
+</owl:NamedIndividual>
+
+</rdf:RDF>
+
+    
