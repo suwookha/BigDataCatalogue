@@ -690,7 +690,7 @@
         <DataProperty IRI="#qualityResult"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/Policy"/>
@@ -2196,7 +2196,7 @@
         <Class IRI="#ResponsibleParty"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
         <Class IRI="#DataQuality"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -2352,7 +2352,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -5461,7 +5461,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#qualityRequirements</IRI>
+        <IRI>#qualityRequirement</IRI>
         <Literal>requirement statement for evaluating quality of dataset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>

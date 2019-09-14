@@ -1344,9 +1344,9 @@
     
 
 
-    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#qualityRequirements -->
+    <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#qualityRequirement -->
 
-    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#qualityRequirements">
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#qualityRequirement">
         <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#DataQuality"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>requirement statement for evaluating quality of dataset</rdfs:comment>
