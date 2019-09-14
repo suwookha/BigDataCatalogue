@@ -3,6 +3,7 @@
 ITU의 표준에 근거하여 UML과 RDF로 설계를 진행하였으며, 목록은 다음과 같다. 
 
 ***
-1. [UML](./work-1.mdj)
+1. [UML 설계](./work-1.mdj)
 2. [RDF Turtle](./bdc.ttl)
 3. [RDF/XML](./bdc.owl/)
+4. [UML 스키마 문서](./UML-데이터.docx)
