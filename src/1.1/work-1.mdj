@@ -7961,7 +7961,7 @@
 											"top": 382,
 											"width": 289.04052734375,
 											"height": 13,
-											"text": "+qualityRequirements = under 0.1% missing fields",
+											"text": "+qualityRequirement = under 0.1% missing fields",
 											"horizontalAlignment": 0
 										},
 										{
@@ -12603,7 +12603,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFlVxgP7lVMIbg="
 							},
-							"name": "qualityRequirements",
+							"name": "qualityRequirement",
 							"type": "",
 							"value": "under 0.1% missing fields"
 						},
