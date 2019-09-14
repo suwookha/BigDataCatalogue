@@ -885,7 +885,7 @@
 											"top": 646,
 											"width": 212.06884765625,
 											"height": 13,
-											"text": "+qualityRequirements: FreeText[1..*]",
+											"text": "+qualityRequirement: FreeText[1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5007,17 +5007,18 @@
 									"model": {
 										"$ref": "AAAAAAFqkCPopIgTU8s="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 424,
-									"top": 396,
+									"left": 512,
+									"top": 431,
+									"width": 7.22998046875,
 									"height": 13,
-									"alpha": -0.5235987755982988,
-									"distance": 25,
+									"alpha": -1.7058902522872887,
+									"distance": 103.9471019317037,
 									"hostEdge": {
 										"$ref": "AAAAAAFqkCPopYgWslY="
 									},
-									"edgePosition": 2
+									"edgePosition": 2,
+									"text": "1"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -5278,17 +5279,18 @@
 									"model": {
 										"$ref": "AAAAAAFsnw6oZNB/goQ="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 780,
-									"top": 596,
+									"left": 848,
+									"top": 663,
+									"width": 7.22998046875,
 									"height": 13,
-									"alpha": -0.5235987755982988,
-									"distance": 25,
+									"alpha": -2.076870822341844,
+									"distance": 94.89467845985885,
 									"hostEdge": {
 										"$ref": "AAAAAAFsnw6oZdCC6Ro="
 									},
-									"edgePosition": 2
+									"edgePosition": 2,
+									"text": "1"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -6044,7 +6046,8 @@
 								"name": "hasRelation",
 								"reference": {
 									"$ref": "AAAAAAFkWrd5gM1TQME="
-								}
+								},
+								"multiplicity": "1"
 							},
 							"end2": {
 								"_type": "UMLAssociationEnd",
@@ -6252,9 +6255,9 @@
 							"_parent": {
 								"$ref": "AAAAAAFkWvYuv2EPmDQ="
 							},
-							"name": "qualityRequirements",
+							"name": "qualityRequirement",
 							"type": "FreeText",
-							"multiplicity": "1..*"
+							"multiplicity": "1"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6637,7 +6640,8 @@
 								},
 								"reference": {
 									"$ref": "AAAAAAFkWvk2B2Mt4Fg="
-								}
+								},
+								"multiplicity": "1"
 							},
 							"end2": {
 								"_type": "UMLAssociationEnd",
