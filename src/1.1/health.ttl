@@ -306,11 +306,11 @@ bdc:prescriptionSet
 .
 bdc:quality
   rdf:type bdc:DataQuality ;
-  bdc:qualityRequirements "under 1% missing fields" ;
+  bdc:qualityRequirement "under 1% missing fields" ;
   bdc:qualityResult "passed (99.3%)" ;
   bdc:unitOfMeasure "percent" ;
 .
-bdc:qualityRequirements
+bdc:qualityRequirement
   rdf:type rdf:Property ;
   rdfs:comment "requirement statement for evaluating quality of dataset" ;
   rdfs:domain bdc:DataQuality ;

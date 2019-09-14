@@ -80,19 +80,19 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#prescriptionSet">
   <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Dataset"/>
   <contactPoint rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#rParty"/>
+  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription"/>
   <dc:description>Disease prescription data</dc:description>
   <dc:keyword>prescription</dc:keyword>
   <dc:temporalCoverage>2013.1.1 ~ 2017.12.31</dc:temporalCoverage>
   <dc:updateFrequency>weekly</dc:updateFrequency>
   <dc:title>Disease prescription</dc:title>
-  <distribution rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#distPrescription"/>
 </owl:NamedIndividual>
 
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality -->
 
 <owl:NamedIndividual rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#quality">
   <rdf:type rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#DataQuality"/>
-  <qualityRequirements>under 1% missing fields</qualityRequirements>
+  <qualityRequirement>under 1% missing fields</qualityRequirement>
   <qualityResult>passed (99.3%)</qualityResult>
   <unitOfMeasure>percent</unitOfMeasure>
 </owl:NamedIndividual>

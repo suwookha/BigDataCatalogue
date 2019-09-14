@@ -86,7 +86,7 @@
         <DataProperty abbreviatedIRI="owl:qualifiedCardinality"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="owl:minQualifiedCardinality"/>
@@ -682,7 +682,7 @@
         <Literal>weekly</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
         <NamedIndividual IRI="#quality"/>
         <Literal>under 1% missing fields</Literal>
     </DataPropertyAssertion>
@@ -965,7 +965,7 @@
         <Class IRI="#ResponsibleParty"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
         <Class IRI="#DataQuality"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1069,7 +1069,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#qualityRequirements"/>
+        <DataProperty IRI="#qualityRequirement"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1912,7 +1912,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#qualityRequirements</IRI>
+        <IRI>#qualityRequirement</IRI>
         <Literal>requirement statement for evaluating quality of dataset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
