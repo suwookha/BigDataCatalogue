@@ -14520,7 +14520,7 @@
 											"width": 189.26171875,
 											"height": 13,
 											"underline": true,
-											"text": "2019_sat: BDC_Satisfaction"
+											"text": "sat_2019: BDC_Satisfaction"
 										},
 										{
 											"_type": "LabelView",
@@ -17260,7 +17260,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "2019_sat",
+					"name": "sat_2019",
 					"classifier": {
 						"$ref": "AAAAAAFtcHqFsluUdu8="
 					},
