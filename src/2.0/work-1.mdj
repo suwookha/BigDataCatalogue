@@ -6157,7 +6157,7 @@
 											"top": 325,
 											"width": 148.484375,
 											"height": 13,
-											"text": "+minimum_quantity: int[1]",
+											"text": "+minimumQuantity: int[1]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -14210,7 +14210,7 @@
 											"top": 269,
 											"width": 205.9814453125,
 											"height": 13,
-											"text": "+minimum_quantity = 1",
+											"text": "+minimumQuantity = 1",
 											"horizontalAlignment": 0
 										},
 										{
@@ -17021,7 +17021,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFtcHH1jTBoW+w="
 							},
-							"name": "minimum_quantity",
+							"name": "minimumQuantity",
 							"type": "int",
 							"multiplicity": "1"
 						},
@@ -17165,7 +17165,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFtcWEyBOVuTXI="
 							},
-							"name": "minimum_quantity",
+							"name": "minimumQuantity",
 							"type": "",
 							"value": "1"
 						},
