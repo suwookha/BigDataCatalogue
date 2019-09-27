@@ -4860,7 +4860,7 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 656,
+							"left": 632,
 							"top": 280,
 							"width": 258.5087890625,
 							"height": 65,
@@ -4880,7 +4880,7 @@
 								"$ref": "AAAAAAFl9Y75X6mbelE="
 							},
 							"lineStyle": 1,
-							"points": "772:345;751:407"
+							"points": "753:345;741:407"
 						},
 						{
 							"_type": "UMLAssociationView",
