@@ -362,6 +362,9 @@
         <NamedIndividual IRI="http://purl.org/dc/terms/isFormatOf"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#comment"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="owl:equivalentClass"/>
     </Declaration>
     <Declaration>
@@ -2250,6 +2253,10 @@
         <Class IRI="#ContactType"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#comment"/>
+        <Class IRI="#Domain"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#condition"/>
         <Class IRI="#Sale"/>
     </DataPropertyDomain>
@@ -2447,6 +2454,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#comment"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -5551,6 +5562,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#address</IRI>
         <Literal>physical and email address at which the organization or individual may be contacted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#comment</IRI>
+        <Literal>an additional information for domain</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
