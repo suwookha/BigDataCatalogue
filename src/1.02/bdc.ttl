@@ -133,6 +133,12 @@ bdc:address
   rdfs:domain bdc:ContactType ;
   rdfs:range xsd:string ;
 .
+bdc:comment
+  rdf:type rdf:Property ;
+  rdfs:comment "an additional information for domain" ;
+  rdfs:domain bdc:Domain ;
+  rdfs:range xsd:string ;
+.
 bdc:contact
   rdf:type rdf:Property ;
   rdfs:comment "information required to enable contact with the responsible person and/or organization" ;
