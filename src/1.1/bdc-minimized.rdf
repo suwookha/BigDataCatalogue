@@ -219,6 +219,14 @@
         <rdfs:comment>physical and email address at which the organization or individual may be contacted</rdfs:comment>
     </owl:DatatypeProperty>
     
+<!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#comment">
+        <rdfs:domain rdf:resource="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#Domain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>an additional information for domain</rdfs:comment>
+    </owl:DatatypeProperty>
+
 <!-- http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#hoursOfServices -->
 
     <owl:DatatypeProperty rdf:about="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#hoursOfServices">

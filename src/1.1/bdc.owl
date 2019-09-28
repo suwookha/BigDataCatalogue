@@ -6,11 +6,13 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue">
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="bdc" IRI="http://www.itu.int/xml-namespace/itut/Y.bdm-sch/bigdatacatalogue#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://www.w3.org/ns/dcat#</Import>
     <Import>https://www.w3.org/2002/07/owl#</Import>
@@ -207,7 +209,7 @@
         <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+        <AnnotationProperty abbreviatedIRI="dc:coverage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/DDC"/>
@@ -231,10 +233,10 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/isVersionOf"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://purl.org/dc/terms/provenance"/>
@@ -261,7 +263,7 @@
         <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
@@ -339,6 +341,9 @@
         <NamedIndividual IRI="http://purl.org/dc/terms/isFormatOf"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#comment"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="owl:equivalentClass"/>
     </Declaration>
     <Declaration>
@@ -402,7 +407,7 @@
         <NamedIndividual IRI="http://purl.org/dc/terms/Location"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/Standard"/>
@@ -471,19 +476,19 @@
         <DataProperty IRI="#function"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/temporalCoverage"/>
+        <DataProperty abbreviatedIRI="dc:temporalCoverage"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="owl:datatypeComplementOf"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.w3.org/ns/dcat#dataDictionary"/>
+        <AnnotationProperty abbreviatedIRI="dcat:dataDictionary"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="owl:annotatedProperty"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/type"/>
+        <AnnotationProperty abbreviatedIRI="dc:type"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/SizeOrDuration"/>
@@ -498,7 +503,7 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
@@ -543,7 +548,7 @@
         <ObjectProperty abbreviatedIRI="owl:intersectionOf"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.w3.org/ns/dcat#size"/>
+        <AnnotationProperty abbreviatedIRI="dcat:size"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/MESH"/>
@@ -555,7 +560,7 @@
         <ObjectProperty abbreviatedIRI="rdfs:range"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/updateFrequency"/>
+        <DataProperty abbreviatedIRI="dc:updateFrequency"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://purl.org/dc/terms/educationLevel"/>
@@ -573,7 +578,7 @@
         <ObjectProperty abbreviatedIRI="owl:complementOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/keyword"/>
+        <DataProperty abbreviatedIRI="dc:keyword"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#address"/>
@@ -636,13 +641,13 @@
         <ObjectProperty IRI="http://xmlns.com/foaf/0.1/Page"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.w3.org/ns/dcat#granularity"/>
+        <AnnotationProperty abbreviatedIRI="dcat:granularity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/tableOfContents"/>
@@ -654,7 +659,7 @@
         <DataProperty IRI="#phoneNumber"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/NLM"/>
@@ -690,9 +695,6 @@
         <DataProperty IRI="#qualityResult"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#qualityRequirement"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/Policy"/>
     </Declaration>
     <Declaration>
@@ -726,7 +728,7 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/references"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.w3.org/ns/dcat#dataQuality"/>
+        <AnnotationProperty abbreviatedIRI="dcat:dataQuality"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/PhysicalResource"/>
@@ -738,10 +740,10 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/isReplacedBy"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/hasVersion"/>
@@ -780,7 +782,7 @@
         <NamedIndividual IRI="http://purl.org/dc/terms/Jurisdiction"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/isRequiredBy"/>
@@ -793,6 +795,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://purl.org/dc/terms/abstract"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#qualityRequirement"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="owl:hasValue"/>
@@ -2116,31 +2121,31 @@
         <DataProperty IRI="http://purl.org/dc/terms/date"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <DataProperty abbreviatedIRI="dc:description"/>
         <Class IRI="#Catalogue"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <DataProperty abbreviatedIRI="dc:description"/>
         <Class IRI="#Dataset"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+        <DataProperty abbreviatedIRI="dc:format"/>
         <Class IRI="#File"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/keyword"/>
+        <DataProperty abbreviatedIRI="dc:keyword"/>
         <Class IRI="#Dataset"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+        <DataProperty abbreviatedIRI="dc:language"/>
         <Class IRI="#Catalogue"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/temporalCoverage"/>
+        <DataProperty abbreviatedIRI="dc:temporalCoverage"/>
         <Class IRI="#Dataset"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/updateFrequency"/>
+        <DataProperty abbreviatedIRI="dc:updateFrequency"/>
         <Class IRI="#Dataset"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -2154,6 +2159,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#address"/>
         <Class IRI="#ContactType"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#comment"/>
+        <Class IRI="#Domain"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#function"/>
@@ -2224,31 +2233,31 @@
         <Class IRI="#DataQuality"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.w3.org/ns/dcat#byteSize"/>
+        <DataProperty abbreviatedIRI="dcat:byteSize"/>
         <Class IRI="#File"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <DataProperty abbreviatedIRI="dc:description"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+        <DataProperty abbreviatedIRI="dc:format"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/keyword"/>
+        <DataProperty abbreviatedIRI="dc:keyword"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+        <DataProperty abbreviatedIRI="dc:language"/>
         <Datatype IRI="http://purl.org/dc/terms/RFC5646"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/temporalCoverage"/>
+        <DataProperty abbreviatedIRI="dc:temporalCoverage"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/elements/1.1/updateFrequency"/>
+        <DataProperty abbreviatedIRI="dc:updateFrequency"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2309,6 +2318,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#comment"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2379,634 +2392,638 @@
         <DataProperty IRI="#unitOfMeasure"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="dcat:byteSize"/>
+        <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2012-06-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/publisher"/>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
         <IRI>http://purl.org/dc/aboutdcmi#DCMI</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
         <Literal xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <Literal xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#contributor-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <Literal xml:lang="en">An entity responsible for making contributions to the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <Literal xml:lang="en">Contributor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <Literal xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#coverage-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <Literal xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <Literal xml:lang="en">Coverage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/coverage</IRI>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#creator-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal xml:lang="en">An entity primarily responsible for making the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal xml:lang="en">Creator</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/creator</IRI>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <Literal xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#date-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <Literal xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <Literal xml:lang="en">Date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/date</IRI>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <Literal xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#description-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <Literal xml:lang="en">An account of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <Literal xml:lang="en">Description</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <Literal xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#format-007</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <Literal xml:lang="en">The file format, physical medium, or dimensions of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <Literal xml:lang="en">Format</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/format</IRI>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <Literal xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#identifier-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <Literal xml:lang="en">An unambiguous reference to the resource within a given context.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <Literal xml:lang="en">Identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/identifier</IRI>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/keyword</IRI>
+        <AbbreviatedIRI>dc:keyword</AbbreviatedIRI>
         <Literal>commonly used word(s) used to describe the dataset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <Literal xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#language-007</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <Literal xml:lang="en">A language of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <Literal xml:lang="en">Language</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <IRI>http://www.ietf.org/rfc/rfc4646.txt</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/language</IRI>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <Literal xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#publisher-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <Literal xml:lang="en">An entity responsible for making the resource available.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <Literal xml:lang="en">Publisher</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/publisher</IRI>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <Literal xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#relation-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <Literal xml:lang="en">A related resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <Literal xml:lang="en">Relation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/relation</IRI>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <Literal xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#rights-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <Literal xml:lang="en">Information about rights held in and over the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <Literal xml:lang="en">Rights</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/rights</IRI>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <Literal xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#source-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <Literal xml:lang="en">A related resource from which the described resource is derived.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <Literal xml:lang="en">Source</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/source</IRI>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#subject-007</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2012-06-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal xml:lang="en">The topic of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal xml:lang="en">Subject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/temporalCoverage</IRI>
+        <AbbreviatedIRI>dc:temporalCoverage</AbbreviatedIRI>
         <Literal>time period (including time zone) when the dataset was captured</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#title-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
         <Literal xml:lang="en">A name given to the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
         <Literal xml:lang="en">Title</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <IRI>http://dublincore.org/usage/terms/history/#type-006</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal xml:lang="en">The nature or genre of the resource.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
-        <IRI>http://purl.org/dc/elements/1.1/</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal xml:lang="en">Type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
-        <IRI>http://purl.org/dc/elements/1.1/type</IRI>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/dc/elements/1.1/updateFrequency</IRI>
+        <AbbreviatedIRI>dc:updateFrequency</AbbreviatedIRI>
         <Literal>rate of occurrence of dataset update</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -5376,6 +5393,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#comment</IRI>
+        <Literal>an additional information for domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#contact</IRI>
         <Literal>information required to enable contact with the responsible person and/or organization</Literal>
     </AnnotationAssertion>
@@ -5511,7 +5533,7 @@
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/abstract"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/abstract"/>
@@ -5519,23 +5541,23 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/accessRights"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/alternative"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/available"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/bibliographicCitation"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/conformsTo"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/conformsTo"/>
@@ -5543,51 +5565,51 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/coverage"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+        <AnnotationProperty abbreviatedIRI="dc:coverage"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/created"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/date"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/dateAccepted"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/dateCopyrighted"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/dateSubmitted"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/extent"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+        <AnnotationProperty abbreviatedIRI="dc:format"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/format"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+        <AnnotationProperty abbreviatedIRI="dc:format"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasFormat"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasFormat"/>
@@ -5595,7 +5617,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasPart"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasPart"/>
@@ -5603,7 +5625,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/hasVersion"/>
@@ -5611,11 +5633,11 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/identifier"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isFormatOf"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isFormatOf"/>
@@ -5623,7 +5645,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isPartOf"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isPartOf"/>
@@ -5631,7 +5653,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isReferencedBy"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isReferencedBy"/>
@@ -5639,7 +5661,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isReplacedBy"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isReplacedBy"/>
@@ -5647,7 +5669,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isRequiredBy"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isRequiredBy"/>
@@ -5655,7 +5677,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isVersionOf"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/isVersionOf"/>
@@ -5663,31 +5685,31 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/language"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/medium"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+        <AnnotationProperty abbreviatedIRI="dc:format"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/publisher"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/references"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/references"/>
@@ -5695,11 +5717,11 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/relation"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/replaces"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/replaces"/>
@@ -5707,7 +5729,7 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/requires"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <AnnotationProperty abbreviatedIRI="dc:relation"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/requires"/>
@@ -5715,11 +5737,11 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/rights"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/source"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/source"/>
@@ -5727,15 +5749,15 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/spatial"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+        <AnnotationProperty abbreviatedIRI="dc:coverage"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/subject"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/tableOfContents"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/tableOfContents"/>
@@ -5743,34 +5765,38 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/temporal"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+        <AnnotationProperty abbreviatedIRI="dc:coverage"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/type"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/type"/>
+        <AnnotationProperty abbreviatedIRI="dc:type"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.org/dc/terms/valid"/>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </SubAnnotationPropertyOf>
     <AnnotationPropertyRange>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
     </AnnotationPropertyRange>
     <AnnotationPropertyDomain>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
         <IRI>#Catalogue</IRI>
     </AnnotationPropertyDomain>
     <AnnotationPropertyDomain>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
         <IRI>#Dataset</IRI>
     </AnnotationPropertyDomain>
     <AnnotationPropertyDomain>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
         <IRI>#Domain</IRI>
     </AnnotationPropertyDomain>
     <AnnotationPropertyDomain>
